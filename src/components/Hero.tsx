@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Github, Linkedin, Mail, Download, Server, Cloud, Database, Settings } from "lucide-react";
+import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import surajProfile from "@/assets/suraj-profile.png";
+import FloatingLogos from "./FloatingLogos";
 
 const Hero = () => {
   return (
@@ -11,8 +12,8 @@ const Hero = () => {
           <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/5 to-secondary/5"></div>
           {/* Matrix-like grid */}
           <div className="absolute inset-0 opacity-10">
-            <div className="grid grid-cols-12 h-full">
-              {Array.from({ length: 144 }).map((_, i) => (
+            <div className="grid grid-cols-8 md:grid-cols-12 h-full">
+              {Array.from({ length: 96 }).map((_, i) => (
                 <div
                   key={i}
                   className="border-r border-b border-primary/10 animate-pulse"
@@ -24,53 +25,8 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Floating Tech Elements */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Geometric shapes */}
-        <div className="absolute top-20 left-10 w-20 h-20 bg-primary/10 rounded-full animate-float"></div>
-        <div className="absolute top-40 right-20 w-16 h-16 bg-secondary/10 rounded-full animate-float" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute bottom-40 left-20 w-12 h-12 bg-primary/5 rounded-full animate-float" style={{ animationDelay: '2s' }}></div>
-        <div className="absolute bottom-20 right-10 w-24 h-24 bg-secondary/5 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-        
-        {/* Tech Icons */}
-        <div className="absolute top-32 left-1/4 p-3 bg-card/30 backdrop-blur-sm rounded-lg border border-primary/20 animate-float" style={{ animationDelay: '1.5s' }}>
-          <Server className="h-6 w-6 text-primary/60" />
-        </div>
-        <div className="absolute top-60 right-1/4 p-3 bg-card/30 backdrop-blur-sm rounded-lg border border-secondary/20 animate-float" style={{ animationDelay: '2.5s' }}>
-          <Cloud className="h-6 w-6 text-secondary/60" />
-        </div>
-        <div className="absolute bottom-60 left-1/3 p-3 bg-card/30 backdrop-blur-sm rounded-lg border border-primary/20 animate-float" style={{ animationDelay: '3s' }}>
-          <Database className="h-6 w-6 text-primary/60" />
-        </div>
-        <div className="absolute bottom-32 right-1/3 p-3 bg-card/30 backdrop-blur-sm rounded-lg border border-secondary/20 animate-float" style={{ animationDelay: '0.8s' }}>
-          <Settings className="h-6 w-6 text-secondary/60 animate-rotate-360" />
-        </div>
-        
-        {/* Animated lines connecting elements */}
-        <svg className="absolute inset-0 w-full h-full">
-          <defs>
-            <linearGradient id="line-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stopColor="hsl(var(--primary))" stopOpacity="0.2" />
-              <stop offset="100%" stopColor="hsl(var(--secondary))" stopOpacity="0.2" />
-            </linearGradient>
-          </defs>
-          <path
-            d="M100,200 Q400,100 800,300"
-            stroke="url(#line-gradient)"
-            strokeWidth="2"
-            fill="none"
-            className="animate-pulse"
-          />
-          <path
-            d="M200,500 Q600,300 1000,500"
-            stroke="url(#line-gradient)"
-            strokeWidth="2"
-            fill="none"
-            className="animate-pulse"
-            style={{ animationDelay: '1s' }}
-          />
-        </svg>
-      </div>
+      {/* Enhanced Floating Tech Elements */}
+      <FloatingLogos section="hero" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
@@ -78,12 +34,12 @@ const Hero = () => {
           <div className="text-center lg:text-left animate-slide-in-left order-2 lg:order-1">
             <div className="space-y-4 md:space-y-6">
               <div className="space-y-2">
-                <p className="text-muted-foreground text-sm md:text-lg font-mono">Hi, I'm</p>
-                <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent animate-fade-in">
+                <p className="text-muted-foreground text-sm md:text-lg font-mono tracking-wide">Hi, I'm</p>
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent animate-fade-in leading-tight">
                   Suraj Suthar
                 </h1>
                 <div className="relative">
-                  <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-foreground overflow-hidden whitespace-nowrap border-r-2 border-primary animate-typewriter font-mono">
+                  <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-mono border-r-2 border-primary animate-typewriter">
                     DevOps Engineer
                   </h2>
                 </div>
@@ -94,50 +50,50 @@ const Hero = () => {
                 Building resilient cloud infrastructure and automating deployment pipelines.
               </p>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
+              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 <Button 
                   size="lg" 
-                  className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group"
+                  className="bg-gradient-primary hover:shadow-glow transition-all duration-300 group text-sm md:text-base"
                   onClick={() => document.getElementById('tech-stack')?.scrollIntoView({ behavior: 'smooth' })}
                 >
                   <span>Explore My Skills</span>
                   <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground">
+                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm md:text-base">
                   <Download className="mr-2 h-4 w-4" />
                   Download Resume
                 </Button>
               </div>
               
-              <div className="flex gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
+              <div className="flex gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="hover:bg-primary/10 hover:text-primary transition-colors hover:scale-110"
+                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110"
                   asChild
                 >
                   <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-5 w-5" />
+                    <Github className="h-4 w-4 md:h-5 md:w-5" />
                   </a>
                 </Button>
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="hover:bg-primary/10 hover:text-primary transition-colors hover:scale-110"
+                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110"
                   asChild
                 >
                   <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-5 w-5" />
+                    <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
                   </a>
                 </Button>
                 <Button 
                   variant="ghost" 
                   size="icon" 
-                  className="hover:bg-primary/10 hover:text-primary transition-colors hover:scale-110"
+                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110"
                   asChild
                 >
                   <a href="mailto:your.email@example.com">
-                    <Mail className="h-5 w-5" />
+                    <Mail className="h-4 w-4 md:h-5 md:w-5" />
                   </a>
                 </Button>
               </div>
@@ -148,7 +104,7 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-primary rounded-full blur-lg opacity-30 animate-glow-pulse"></div>
-              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-elegant bg-gradient-card">
+              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-elegant bg-gradient-card">
                 <img 
                   src={surajProfile} 
                   alt="Suraj Suthar - DevOps Engineer" 
@@ -159,10 +115,10 @@ const Hero = () => {
               
               {/* Orbiting tech badges */}
               <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-8 right-8 p-2 bg-primary/20 backdrop-blur-sm rounded-full animate-float">
+                <div className="absolute top-4 md:top-8 right-4 md:right-8 p-2 bg-primary/20 backdrop-blur-sm rounded-full animate-float">
                   <span className="text-xs font-bold text-primary">K8s</span>
                 </div>
-                <div className="absolute bottom-8 left-8 p-2 bg-secondary/20 backdrop-blur-sm rounded-full animate-float" style={{ animationDelay: '1s' }}>
+                <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 p-2 bg-secondary/20 backdrop-blur-sm rounded-full animate-float" style={{ animationDelay: '1s' }}>
                   <span className="text-xs font-bold text-secondary">AWS</span>
                 </div>
                 <div className="absolute top-1/2 right-0 p-2 bg-primary/20 backdrop-blur-sm rounded-full animate-float" style={{ animationDelay: '2s' }}>
@@ -174,10 +130,10 @@ const Hero = () => {
         </div>
         
         {/* Scroll Indicator */}
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
+        <div className="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce hidden md:block">
           <div className="flex flex-col items-center space-y-2">
             <span className="text-xs text-muted-foreground font-mono">Scroll Down</span>
-            <ArrowDown className="h-6 w-6 text-muted-foreground" />
+            <ArrowDown className="h-5 w-5 md:h-6 md:w-6 text-muted-foreground" />
           </div>
         </div>
       </div>

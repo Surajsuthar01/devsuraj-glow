@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import FloatingLogos from "./FloatingLogos";
 
 const certifications = [
   {
@@ -65,13 +66,14 @@ const awsCertifications = [
 
 const Certifications = () => {
   return (
-    <section className="py-20 relative">
-      {/* Background Pattern */}
+    <section className="py-12 md:py-20 relative">
+      {/* Background Pattern with floating logos */}
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/3 to-secondary/3"></div>
       </div>
+      <FloatingLogos section="certifications" />
       
-      <div className="container mx-auto px-4 md:px-6 relative">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             Certifications & Credentials
@@ -82,8 +84,8 @@ const Certifications = () => {
         </div>
         
         {/* Major Certifications */}
-        <div className="mb-16">
-          <h3 className="text-2xl font-bold mb-8 text-center">Professional Certifications</h3>
+        <div className="mb-12 md:mb-16">
+          <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-center">Professional Certifications</h3>
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {certifications.map((cert, index) => (
               <Card 
@@ -92,46 +94,46 @@ const Certifications = () => {
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <Link to={`/certification/${cert.id}`}>
-                  <CardContent className="p-6">
+                  <CardContent className="p-4 md:p-6">
                     <div className="space-y-4">
                       {/* Certification Header */}
                       <div className="flex items-start gap-4">
                         <div className="flex-shrink-0">
-                          <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                            <Award className="h-8 w-8 text-primary-foreground" />
+                          <div className="w-12 h-12 md:w-16 md:h-16 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                            <Award className="h-6 w-6 md:h-8 md:w-8 text-primary-foreground" />
                           </div>
                         </div>
-                        <div className="flex-1">
-                          <h4 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                        <div className="flex-1 min-w-0">
+                          <h4 className="text-lg md:text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2 leading-tight">
                             {cert.title}
                           </h4>
-                          <p className="text-primary font-medium">{cert.issuer}</p>
+                          <p className="text-primary font-medium text-sm md:text-base">{cert.issuer}</p>
                         </div>
-                        <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
+                        <ArrowRight className="h-4 w-4 md:h-5 md:w-5 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100 flex-shrink-0" />
                       </div>
                       
                       {/* Date and Credential */}
-                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                        <Calendar className="h-4 w-4" />
-                        <span>{cert.date}</span>
+                      <div className="flex items-center gap-2 text-xs md:text-sm text-muted-foreground">
+                        <Calendar className="h-3 w-3 md:h-4 md:w-4 flex-shrink-0" />
+                        <span className="truncate">{cert.date}</span>
                       </div>
                       
                       {cert.credentialId && (
-                        <div className="text-sm">
+                        <div className="text-xs md:text-sm">
                           <span className="text-muted-foreground">Credential ID: </span>
-                          <span className="font-mono text-primary">{cert.credentialId}</span>
+                          <span className="font-mono text-primary break-all">{cert.credentialId}</span>
                         </div>
                       )}
                       
                       {/* Description */}
-                      <p className="text-muted-foreground text-sm leading-relaxed">
+                      <p className="text-muted-foreground text-xs md:text-sm leading-relaxed line-clamp-3">
                         {cert.description}
                       </p>
                       
                       {/* Skills */}
                       <div className="space-y-2">
-                        <p className="text-sm font-medium text-foreground">Key Skills:</p>
-                        <div className="flex flex-wrap gap-2">
+                        <p className="text-xs md:text-sm font-medium text-foreground">Key Skills:</p>
+                        <div className="flex flex-wrap gap-1 md:gap-2">
                           {cert.skills.map((skill) => (
                             <Badge 
                               key={skill} 

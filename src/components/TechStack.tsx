@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+import FloatingLogos from "./FloatingLogos";
 
 const techStack = [
   {
@@ -77,8 +78,11 @@ const techStack = [
 
 const TechStack = () => {
   return (
-    <section className="py-20 relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+    <section className="py-12 md:py-20 relative overflow-hidden">
+      {/* Background with floating logos */}
+      <FloatingLogos section="tech-stack" />
+      
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
           <h2 id="tech-stack" className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             DevOps Tools & Technologies
