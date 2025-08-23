@@ -1,10 +1,12 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, ExternalLink, Award } from "lucide-react";
+import { Calendar, ExternalLink, Award, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const certifications = [
   {
+    id: "rhcsa",
     title: "Red Hat Certified System Administrator (RHCSA)",
     issuer: "Red Hat",
     date: "May 17, 2024 - May 17, 2027",
@@ -14,6 +16,7 @@ const certifications = [
     link: "https://www.credly.com/users/suraj-suthar.34931b98"
   },
   {
+    id: "oracle",
     title: "Oracle Certified Foundations Associate",
     issuer: "Oracle Corporation",
     date: "March 25, 2025",
@@ -68,12 +71,12 @@ const Certifications = () => {
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/3 to-secondary/3"></div>
       </div>
       
-      <div className="container mx-auto px-6 relative">
-        <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl lg:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
+      <div className="container mx-auto px-4 md:px-6 relative">
+        <div className="text-center mb-12 md:mb-16 animate-fade-in">
+          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 bg-gradient-primary bg-clip-text text-transparent">
             Certifications & Credentials
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-muted-foreground max-w-2xl mx-auto">
             Professional credentials that validate my expertise and technical knowledge.
           </p>
         </div>
@@ -81,80 +84,72 @@ const Certifications = () => {
         {/* Major Certifications */}
         <div className="mb-16">
           <h3 className="text-2xl font-bold mb-8 text-center">Professional Certifications</h3>
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {certifications.map((cert, index) => (
               <Card 
-                key={cert.title}
-                className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-primary/10 animate-slide-up overflow-hidden"
+                key={cert.id}
+                className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-primary/10 animate-slide-up overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    {/* Certification Header */}
-                    <div className="flex items-start gap-4">
-                      <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                          <Award className="h-8 w-8 text-primary-foreground" />
+                <Link to={`/certification/${cert.id}`}>
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      {/* Certification Header */}
+                      <div className="flex items-start gap-4">
+                        <div className="flex-shrink-0">
+                          <div className="w-16 h-16 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                            <Award className="h-8 w-8 text-primary-foreground" />
+                          </div>
+                        </div>
+                        <div className="flex-1">
+                          <h4 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
+                            {cert.title}
+                          </h4>
+                          <p className="text-primary font-medium">{cert.issuer}</p>
+                        </div>
+                        <ArrowRight className="h-5 w-5 text-muted-foreground group-hover:text-primary transition-colors opacity-0 group-hover:opacity-100" />
+                      </div>
+                      
+                      {/* Date and Credential */}
+                      <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                        <Calendar className="h-4 w-4" />
+                        <span>{cert.date}</span>
+                      </div>
+                      
+                      {cert.credentialId && (
+                        <div className="text-sm">
+                          <span className="text-muted-foreground">Credential ID: </span>
+                          <span className="font-mono text-primary">{cert.credentialId}</span>
+                        </div>
+                      )}
+                      
+                      {/* Description */}
+                      <p className="text-muted-foreground text-sm leading-relaxed">
+                        {cert.description}
+                      </p>
+                      
+                      {/* Skills */}
+                      <div className="space-y-2">
+                        <p className="text-sm font-medium text-foreground">Key Skills:</p>
+                        <div className="flex flex-wrap gap-2">
+                          {cert.skills.map((skill) => (
+                            <Badge 
+                              key={skill} 
+                              variant="secondary" 
+                              className="text-xs bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                            >
+                              {skill}
+                            </Badge>
+                          ))}
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-xl font-semibold text-foreground group-hover:text-primary transition-colors mb-2">
-                          {cert.title}
-                        </h4>
-                        <p className="text-primary font-medium">{cert.issuer}</p>
+                      
+                      <div className="pt-2 border-t border-border/50">
+                        <p className="text-xs text-muted-foreground">Click to view detailed information</p>
                       </div>
                     </div>
-                    
-                    {/* Date and Credential */}
-                    <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <Calendar className="h-4 w-4" />
-                      <span>{cert.date}</span>
-                    </div>
-                    
-                    {cert.credentialId && (
-                      <div className="text-sm">
-                        <span className="text-muted-foreground">Credential ID: </span>
-                        <span className="font-mono text-primary">{cert.credentialId}</span>
-                      </div>
-                    )}
-                    
-                    {/* Description */}
-                    <p className="text-muted-foreground text-sm leading-relaxed">
-                      {cert.description}
-                    </p>
-                    
-                    {/* Skills */}
-                    <div className="space-y-2">
-                      <p className="text-sm font-medium text-foreground">Key Skills:</p>
-                      <div className="flex flex-wrap gap-2">
-                        {cert.skills.map((skill) => (
-                          <Badge 
-                            key={skill} 
-                            variant="secondary" 
-                            className="text-xs bg-primary/10 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
-                          >
-                            {skill}
-                          </Badge>
-                        ))}
-                      </div>
-                    </div>
-                    
-                    {/* View Certificate Link */}
-                    {cert.link && (
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="w-full border-primary text-primary hover:bg-primary hover:text-primary-foreground group-hover:shadow-elegant transition-all duration-300"
-                        asChild
-                      >
-                        <a href={cert.link} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          View on Credly
-                        </a>
-                      </Button>
-                    )}
-                  </div>
-                </CardContent>
+                  </CardContent>
+                </Link>
               </Card>
             ))}
           </div>
@@ -163,53 +158,53 @@ const Certifications = () => {
         {/* AWS Educate Certifications */}
         <div>
           <h3 className="text-2xl font-bold mb-8 text-center">AWS Educate Certifications</h3>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {awsCertifications.map((cert, index) => (
-              <Card 
-                key={cert.title}
-                className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card border-primary/10 animate-bounce-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <CardContent className="p-6">
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 bg-gradient-secondary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                        <Award className="h-5 w-5 text-secondary-foreground" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight">
-                          {cert.title}
-                        </h4>
-                      </div>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
+          {awsCertifications.map((cert, index) => (
+            <Card 
+              key={cert.title}
+              className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card border-primary/10 animate-bounce-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <CardContent className="p-4 md:p-6">
+                <div className="space-y-3 md:space-y-4">
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-secondary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                      <Award className="h-4 w-4 md:h-5 md:w-5 text-secondary-foreground" />
                     </div>
-                    
-                    <p className="text-secondary font-medium text-sm">{cert.issuer}</p>
-                    
-                    <div className="flex items-center gap-2 text-xs text-muted-foreground">
-                      <Calendar className="h-3 w-3" />
-                      <span>{cert.date}</span>
-                    </div>
-                    
-                    <p className="text-muted-foreground text-xs leading-relaxed">
-                      {cert.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-1">
-                      {cert.skills.map((skill) => (
-                        <Badge 
-                          key={skill} 
-                          variant="outline" 
-                          className="text-xs border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground transition-colors"
-                        >
-                          {skill}
-                        </Badge>
-                      ))}
+                    <div className="flex-1 min-w-0">
+                      <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight truncate">
+                        {cert.title}
+                      </h4>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  
+                  <p className="text-secondary font-medium text-sm">{cert.issuer}</p>
+                  
+                  <div className="flex items-center gap-2 text-xs text-muted-foreground">
+                    <Calendar className="h-3 w-3 flex-shrink-0" />
+                    <span>{cert.date}</span>
+                  </div>
+                  
+                  <p className="text-muted-foreground text-xs leading-relaxed line-clamp-3">
+                    {cert.description}
+                  </p>
+                  
+                  <div className="flex flex-wrap gap-1">
+                    {cert.skills.map((skill) => (
+                      <Badge 
+                        key={skill} 
+                        variant="outline" 
+                        className="text-xs border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground transition-colors"
+                      >
+                        {skill}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
         </div>
         
         {/* Credly Profile Link */}
