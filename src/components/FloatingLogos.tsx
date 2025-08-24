@@ -37,7 +37,7 @@ const FloatingLogos = ({ section = "hero" }: { section?: string }) => {
   const getAnimationDelay = (index: number) => `${(index * 0.5) % 4}s`;
   
   const getSize = (index: number) => {
-    const sizes = ["w-8 h-8", "w-10 h-10", "w-6 h-6", "w-12 h-12"];
+    const sizes = ["w-12 h-12", "w-16 h-16", "w-10 h-10", "w-20 h-20"];
     return sizes[index % sizes.length];
   };
 

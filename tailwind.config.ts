@@ -131,6 +131,10 @@ export default {
 				typewriter: {
 					'0%': { width: '0ch' },
 					'100%': { width: '20ch' }
+				},
+				gradient: {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' }
 				}
 			},
 			animation: {
@@ -145,6 +149,7 @@ export default {
 				'float': 'float 3s ease-in-out infinite',
 				'rotate-360': 'rotate360 20s linear infinite',
 				'typewriter': 'typewriter 3s steps(20) forwards',
+				'gradient': 'gradient 3s ease-in-out infinite',
 			}
 		}
 	},

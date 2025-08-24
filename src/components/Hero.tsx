@@ -35,8 +35,10 @@ const Hero = () => {
             <div className="space-y-4 md:space-y-6">
               <div className="space-y-2">
                 <p className="text-muted-foreground text-sm md:text-lg font-mono tracking-wide">Hi, I'm</p>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold bg-gradient-primary bg-clip-text text-transparent animate-fade-in leading-tight">
-                  Suraj Suthar
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                  <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-[length:200%_100%] animate-[gradient_3s_ease-in-out_infinite] bg-clip-text text-transparent">
+                    Suraj Suthar
+                  </span>
                 </h1>
                 <div className="relative">
                   <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-mono border-r-2 border-primary animate-typewriter">
@@ -106,7 +108,7 @@ const Hero = () => {
               <div className="absolute -inset-4 bg-gradient-primary rounded-full blur-lg opacity-30 animate-glow-pulse"></div>
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-elegant bg-gradient-card">
                 <img 
-                  src={surajProfile} 
+                  src="/lovable-uploads/7d75b1cd-eec9-42d5-b7b1-74e5e91bab41.png" 
                   alt="Suraj Suthar - DevOps Engineer" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
