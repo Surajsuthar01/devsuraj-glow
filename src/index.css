@@ -18,10 +18,10 @@
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 7%;
 
-    /* Primary - Vibrant animated blue */
-    --primary: 217 91% 60%;
+    /* Primary - Purple theme #9381ff */
+    --primary: 257 100% 75%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 217 91% 70%;
+    --primary-glow: 257 100% 85%;
 
     /* Secondary - Complementary green */
     --secondary: 142 76% 36%;
@@ -71,10 +71,10 @@
     --popover: 0 0% 8%;
     --popover-foreground: 0 0% 95%;
 
-    /* Primary - Bright animated blue for dark mode */
-    --primary: 217 91% 70%;
+    /* Primary - Purple theme for dark mode */
+    --primary: 257 100% 75%;
     --primary-foreground: 0 0% 8%;
-    --primary-glow: 217 91% 80%;
+    --primary-glow: 257 100% 85%;
 
     /* Secondary - Bright green for dark mode */
     --secondary: 142 76% 46%;

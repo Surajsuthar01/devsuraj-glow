@@ -23,6 +23,33 @@ const certifications = [
     date: "March 25, 2025",
     description: "Oracle Fusion Cloud Applications HCM Certified Foundations Associate. Recognized by Oracle Corporation as Oracle Certified professional.",
     skills: ["Oracle Cloud", "HCM Applications", "Cloud Foundations"]
+  },
+  {
+    id: "kodekloud-docker",
+    title: "Docker Training Course for the Absolute Beginner",
+    issuer: "KodeKloud",
+    date: "June 04, 2025",
+    credentialId: "5899481-b31c-4217-b3fd-1db742087f0d",
+    description: "Comprehensive Docker containerization training covering fundamentals to advanced concepts. Mastered container creation, image management, networking, and orchestration.",
+    skills: ["Docker Containers", "Image Management", "Docker Compose", "Container Networking", "Volume Management"]
+  },
+  {
+    id: "hackerrank-sql",
+    title: "SQL (Basic) Certificate",
+    issuer: "HackerRank",
+    date: "June 18, 2025",
+    credentialId: "8BCCB7FAAEE7",
+    description: "Demonstrated proficiency in fundamental SQL concepts including querying, data manipulation, and database operations through hands-on assessments.",
+    skills: ["SQL Queries", "Data Manipulation", "Database Operations", "JOIN Operations", "Data Analysis"]
+  },
+  {
+    id: "techforce-cybersecurity",
+    title: "Advanced Cyber Security with Internship",
+    issuer: "TechForce Academy",
+    date: "May 26, 2025 - July 10, 2025",
+    credentialId: "uk8+xf",
+    description: "Comprehensive cybersecurity training program with practical internship experience. Covered advanced security concepts, threat analysis, and hands-on security implementations.",
+    skills: ["Cybersecurity Fundamentals", "Threat Analysis", "Security Implementation", "Risk Assessment", "Incident Response"]
   }
 ];
 

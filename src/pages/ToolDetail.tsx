@@ -133,6 +133,166 @@ const toolData = {
     realWorldUse: "Docker is used by millions of developers worldwide. Companies like Netflix, PayPal, and Spotify use Docker to deploy and scale their applications efficiently across their infrastructure.",
     learnMore: "https://docs.docker.com/"
   },
+  "linux": {
+    name: "Linux",
+    category: "Operating System",
+    proficiency: 90,
+    description: "A powerful, open-source operating system that powers the majority of servers, supercomputers, and cloud infrastructure worldwide.",
+    fullDescription: "Linux is a family of open-source Unix-like operating systems based on the Linux kernel. It's the foundation of modern computing infrastructure, powering everything from smartphones to supercomputers. Linux provides unmatched stability, security, and flexibility for enterprise environments.",
+    whyUsed: "Linux is the backbone of modern IT infrastructure due to its stability, security, and cost-effectiveness. It offers superior performance for server workloads, extensive customization options, and strong community support. Most cloud providers and DevOps tools are built on Linux.",
+    industryApplications: [
+      "Server Infrastructure: Running web servers, databases, and application servers",
+      "Cloud Computing: Base OS for most cloud instances and containers",
+      "DevOps Automation: Platform for CI/CD pipelines and deployment tools",
+      "High-Performance Computing: Powering supercomputers and research facilities",
+      "Embedded Systems: Running IoT devices and industrial equipment"
+    ],
+    keyFeatures: [
+      "Multi-user Environment",
+      "Advanced Security Model",
+      "Package Management",
+      "Command Line Interface",
+      "Process Management",
+      "File System Flexibility"
+    ],
+    benefits: [
+      "Zero licensing costs compared to proprietary systems",
+      "Superior security with regular updates and patches",
+      "Excellent performance and resource utilization",
+      "Vast ecosystem of open-source tools and applications",
+      "Customizable to specific organizational needs"
+    ],
+    realWorldUse: "Linux runs 96.3% of the world's top 1 million web servers. Companies like Google, Facebook, Amazon, and Netflix rely on Linux for their critical infrastructure. It's the preferred choice for DevOps engineers worldwide.",
+    learnMore: "https://www.kernel.org/doc/html/latest/"
+  },
+  "git": {
+    name: "Git",
+    category: "Version Control",
+    proficiency: 90,
+    description: "A distributed version control system for tracking changes in source code during software development.",
+    fullDescription: "Git is a distributed version-control system for tracking changes in any set of files, originally designed for coordinating work among programmers during software development. It provides strong support for non-linear development, distributed workflows, and data integrity.",
+    whyUsed: "Git is essential for modern software development because it enables collaboration, tracks changes, maintains code history, and supports branching strategies. It's the foundation of DevOps practices, enabling continuous integration and deployment workflows.",
+    industryApplications: [
+      "Source Code Management: Tracking and managing code changes across teams",
+      "Collaboration: Multiple developers working on the same codebase",
+      "Release Management: Managing software versions and releases",
+      "Code Review: Peer review process through pull/merge requests",
+      "Backup and Recovery: Distributed nature provides built-in backup"
+    ],
+    keyFeatures: [
+      "Distributed Architecture",
+      "Branching and Merging",
+      "Commit History",
+      "Remote Repositories",
+      "Conflict Resolution",
+      "Tagging and Releases"
+    ],
+    benefits: [
+      "Complete change history for accountability and debugging",
+      "Enables parallel development through branching",
+      "Distributed nature eliminates single point of failure",
+      "Supports various workflows from simple to complex",
+      "Integrates with all major development tools"
+    ],
+    realWorldUse: "Git is used by virtually every software company and open-source project. GitHub alone hosts over 200 million repositories. It's the standard for version control in modern development workflows.",
+    learnMore: "https://git-scm.com/doc"
+  },
+  "grafana": {
+    name: "Grafana",
+    category: "Visualization",
+    proficiency: 85,
+    description: "An open-source analytics and interactive visualization web application for monitoring and observability.",
+    fullDescription: "Grafana is the open-source analytics and monitoring solution for every database. It allows you to query, visualize, alert on, and understand your metrics no matter where they are stored. Create, explore, and share dashboards with your team and foster a data-driven culture.",
+    whyUsed: "Grafana transforms raw metrics into actionable insights through beautiful, customizable dashboards. It's crucial for monitoring system health, application performance, and business metrics. Its visualization capabilities help teams quickly identify issues and make data-driven decisions.",
+    industryApplications: [
+      "Infrastructure Monitoring: Visualizing server metrics, network performance, and resource usage",
+      "Application Performance: Monitoring application logs, response times, and error rates",
+      "Business Intelligence: Creating dashboards for business KPIs and metrics",
+      "IoT Analytics: Visualizing sensor data and device performance",
+      "DevOps Observability: Monitoring CI/CD pipelines and deployment metrics"
+    ],
+    keyFeatures: [
+      "Multi-data Source Support",
+      "Customizable Dashboards",
+      "Alerting System",
+      "User Management",
+      "Plugin Ecosystem",
+      "Time Series Analysis"
+    ],
+    benefits: [
+      "Real-time visibility into system performance and health",
+      "Customizable dashboards for different stakeholder needs",
+      "Proactive alerting prevents downtime and issues",
+      "Supports 60+ data sources including Prometheus, InfluxDB",
+      "Enables data-driven decision making across organizations"
+    ],
+    realWorldUse: "Used by companies like Bloomberg, JPMorgan Chase, and eBay for monitoring their critical infrastructure. Grafana has over 20 million users worldwide and is the standard for observability dashboards.",
+    learnMore: "https://grafana.com/docs/"
+  },
+  "prometheus": {
+    name: "Prometheus",
+    category: "Monitoring",
+    proficiency: 85,
+    description: "An open-source systems monitoring and alerting toolkit with a dimensional data model and powerful query language.",
+    fullDescription: "Prometheus is an open-source systems monitoring and alerting toolkit originally built at SoundCloud. It collects and stores metrics as time series data, recording information with a timestamp. It's designed for reliability and scalability in dynamic environments.",
+    whyUsed: "Prometheus excels in dynamic, cloud-native environments where traditional monitoring falls short. Its pull-based model, service discovery, and powerful query language make it ideal for microservices architectures. It's the de facto standard for Kubernetes monitoring.",
+    industryApplications: [
+      "Microservices Monitoring: Tracking performance across distributed applications",
+      "Kubernetes Observability: Monitoring container orchestration platforms",
+      "Infrastructure Metrics: Collecting system and application metrics",
+      "SLA Monitoring: Tracking service level agreements and uptime",
+      "Capacity Planning: Analyzing resource usage trends for scaling decisions"
+    ],
+    keyFeatures: [
+      "Time Series Database",
+      "PromQL Query Language",
+      "Service Discovery",
+      "Pull-based Model",
+      "Multi-dimensional Data",
+      "Alerting Rules"
+    ],
+    benefits: [
+      "Built for cloud-native and dynamic environments",
+      "Powerful query language for complex analysis",
+      "Reliable even during infrastructure failures",
+      "Horizontal scalability for large deployments",
+      "Strong integration with Kubernetes and container ecosystems"
+    ],
+    realWorldUse: "Adopted by companies like Digital Ocean, Ericsson, and CoreOS. It's a graduated project of the Cloud Native Computing Foundation and is used by thousands of organizations for monitoring their cloud-native infrastructure.",
+    learnMore: "https://prometheus.io/docs/"
+  },
+  "jenkins": {
+    name: "Jenkins",
+    category: "CI/CD",
+    proficiency: 75,
+    description: "An open-source automation server that enables developers to build, test, and deploy applications efficiently.",
+    fullDescription: "Jenkins is an open-source automation server written in Java. It helps to automate the non-human part of the software development process, with continuous integration and facilitating technical aspects of continuous delivery. It supports version control tools and can execute Apache Ant, Apache Maven, and sbt based projects.",
+    whyUsed: "Jenkins is fundamental to DevOps practices, enabling continuous integration and continuous deployment (CI/CD). It reduces manual errors, accelerates release cycles, and ensures consistent deployment processes. Its extensive plugin ecosystem makes it highly adaptable to various technology stacks.",
+    industryApplications: [
+      "Continuous Integration: Automating code building and testing processes",
+      "Continuous Deployment: Automated application deployment to various environments",
+      "Pipeline Orchestration: Managing complex multi-stage deployment workflows",
+      "Quality Assurance: Running automated tests and code quality checks",
+      "Release Management: Coordinating releases across multiple applications"
+    ],
+    keyFeatures: [
+      "Pipeline as Code",
+      "Extensive Plugin Ecosystem",
+      "Distributed Builds",
+      "Blue-Green Deployments",
+      "Integration Capabilities",
+      "Role-based Security"
+    ],
+    benefits: [
+      "Accelerates software delivery cycles from weeks to hours",
+      "Reduces manual deployment errors and inconsistencies",
+      "Enables early detection of integration issues",
+      "Supports complex multi-environment deployment strategies",
+      "Provides visibility into deployment processes and status"
+    ],
+    realWorldUse: "Used by companies like Netflix, LinkedIn, and Samsung for their CI/CD pipelines. Jenkins has over 1.5 million installations worldwide and is one of the most popular DevOps tools for automation.",
+    learnMore: "https://www.jenkins.io/doc/"
+  },
   "aws": {
     name: "Amazon Web Services",
     category: "Cloud",

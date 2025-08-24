@@ -70,32 +70,32 @@ const Hero = () => {
               <div className="flex gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
                 <Button 
                   variant="ghost" 
-                  size="icon" 
-                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110"
+                  size="lg" 
+                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 p-4"
                   asChild
                 >
                   <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-4 w-4 md:h-5 md:w-5" />
+                    <Github className="h-6 w-6 md:h-8 md:w-8" />
                   </a>
                 </Button>
                 <Button 
                   variant="ghost" 
-                  size="icon" 
-                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110"
+                  size="lg" 
+                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 p-4"
                   asChild
                 >
                   <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-4 w-4 md:h-5 md:w-5" />
+                    <Linkedin className="h-6 w-6 md:h-8 md:w-8" />
                   </a>
                 </Button>
                 <Button 
                   variant="ghost" 
-                  size="icon" 
-                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110"
+                  size="lg" 
+                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 p-4"
                   asChild
                 >
                   <a href="mailto:your.email@example.com">
-                    <Mail className="h-4 w-4 md:h-5 md:w-5" />
+                    <Mail className="h-6 w-6 md:h-8 md:w-8" />
                   </a>
                 </Button>
               </div>
@@ -106,13 +106,18 @@ const Hero = () => {
           <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2">
             <div className="relative">
               <div className="absolute -inset-4 bg-gradient-primary rounded-full blur-lg opacity-30 animate-glow-pulse"></div>
-              <div className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-4 border-primary/20 shadow-elegant bg-gradient-card">
+              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-4 border-primary/30 shadow-elegant bg-gradient-card">
                 <img 
                   src="/lovable-uploads/7d75b1cd-eec9-42d5-b7b1-74e5e91bab41.png" 
                   alt="Suraj Suthar - DevOps Engineer" 
-                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center scale-110 hover:scale-125 transition-transform duration-500"
+                  style={{ 
+                    filter: 'contrast(1.1) brightness(1.05)',
+                    backgroundBlendMode: 'multiply'
+                  }}
                 />
-                <div className="absolute inset-0 bg-gradient-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-gradient-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
+                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-transparent to-primary/5"></div>
               </div>
               
               {/* Orbiting tech badges */}

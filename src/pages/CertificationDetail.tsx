@@ -42,6 +42,66 @@ const certificationData = {
       "Understand integration capabilities"
     ],
     industryValue: "Oracle certifications are highly valued in enterprise environments, especially in organizations using Oracle's cloud solutions for HR, finance, and other business applications."
+  },
+  "kodekloud-docker": {
+    title: "Docker Training Course for the Absolute Beginner",
+    issuer: "KodeKloud",
+    date: "June 04, 2025",
+    credentialId: "5899481-b31c-4217-b3fd-1db742087f0d",
+    description: "Comprehensive Docker containerization training covering fundamentals to advanced concepts. Mastered container creation, image management, networking, and orchestration.",
+    fullDescription: "This intensive Docker training program covers everything from basic containerization concepts to advanced Docker features. The course includes hands-on labs, real-world scenarios, and practical exercises that prepare professionals for container-based development and deployment in production environments.",
+    skills: ["Docker Containers", "Image Management", "Docker Compose", "Container Networking", "Volume Management", "Dockerfile Creation", "Container Security"],
+    objectives: [
+      "Understand containerization concepts and Docker architecture",
+      "Create and manage Docker containers effectively",
+      "Build custom Docker images using Dockerfiles",
+      "Implement container networking and communication",
+      "Use Docker Compose for multi-container applications",
+      "Manage persistent data with Docker volumes",
+      "Apply container security best practices",
+      "Troubleshoot common Docker issues"
+    ],
+    industryValue: "Docker skills are essential in modern DevOps environments. This certification demonstrates practical ability to work with containerization, which is fundamental to microservices architecture, CI/CD pipelines, and cloud-native development."
+  },
+  "hackerrank-sql": {
+    title: "SQL (Basic) Certificate",
+    issuer: "HackerRank",
+    date: "June 18, 2025",
+    credentialId: "8BCCB7FAAEE7",
+    description: "Demonstrated proficiency in fundamental SQL concepts including querying, data manipulation, and database operations through hands-on assessments.",
+    fullDescription: "This certification validates core SQL skills through practical, hands-on assessments. It covers essential database operations, query optimization, and data manipulation techniques that are crucial for backend development, data analysis, and DevOps automation tasks.",
+    skills: ["SQL Queries", "Data Manipulation", "Database Operations", "JOIN Operations", "Data Analysis", "Query Optimization", "Data Filtering"],
+    objectives: [
+      "Write efficient SELECT queries with filtering and sorting",
+      "Perform complex JOIN operations across multiple tables",
+      "Use aggregate functions and GROUP BY clauses effectively",
+      "Implement data manipulation with INSERT, UPDATE, DELETE",
+      "Apply subqueries and nested query techniques",
+      "Understand database constraints and relationships",
+      "Optimize query performance and execution",
+      "Handle data types and conversions properly"
+    ],
+    industryValue: "SQL proficiency is fundamental for DevOps engineers working with databases, data pipelines, and automation scripts. This certification demonstrates ability to work with data effectively in various technical roles."
+  },
+  "techforce-cybersecurity": {
+    title: "Advanced Cyber Security with Internship",
+    issuer: "TechForce Academy",
+    date: "May 26, 2025 - July 10, 2025",
+    credentialId: "uk8+xf",
+    description: "Comprehensive cybersecurity training program with practical internship experience. Covered advanced security concepts, threat analysis, and hands-on security implementations.",
+    fullDescription: "This intensive cybersecurity program combines theoretical knowledge with practical internship experience. The curriculum covers advanced security concepts, threat detection and analysis, incident response, and hands-on implementation of security measures in real-world scenarios.",
+    skills: ["Cybersecurity Fundamentals", "Threat Analysis", "Security Implementation", "Risk Assessment", "Incident Response", "Network Security", "Vulnerability Assessment"],
+    objectives: [
+      "Identify and analyze various cybersecurity threats",
+      "Implement comprehensive security measures and controls",
+      "Conduct thorough risk assessments and vulnerability scans",
+      "Develop incident response procedures and protocols",
+      "Apply network security principles and configurations",
+      "Use security tools for monitoring and detection",
+      "Create security policies and compliance frameworks",
+      "Perform penetration testing and security audits"
+    ],
+    industryValue: "Cybersecurity skills are critical in today's digital landscape. This certification with internship experience demonstrates practical ability to protect infrastructure and applications, making it highly valuable for DevOps and security-focused roles."
   }
 };
 
