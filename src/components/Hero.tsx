@@ -75,7 +75,7 @@ const Hero = () => {
                   asChild
                 >
                   <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-6 w-6 md:h-8 md:w-8" />
+                    <Github className="h-10 w-10 md:h-12 md:w-12" />
                   </a>
                 </Button>
                 <Button 
@@ -85,7 +85,7 @@ const Hero = () => {
                   asChild
                 >
                   <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-6 w-6 md:h-8 md:w-8" />
+                    <Linkedin className="h-10 w-10 md:h-12 md:w-12" />
                   </a>
                 </Button>
                 <Button 
@@ -95,7 +95,7 @@ const Hero = () => {
                   asChild
                 >
                   <a href="mailto:your.email@example.com">
-                    <Mail className="h-6 w-6 md:h-8 md:w-8" />
+                    <Mail className="h-10 w-10 md:h-12 md:w-12" />
                   </a>
                 </Button>
               </div>
