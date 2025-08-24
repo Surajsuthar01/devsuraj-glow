@@ -72,6 +72,20 @@ const About = () => {
                   Docker containerization, Kubernetes orchestration, CI/CD pipelines with Jenkins, 
                   and infrastructure as code with Terraform and Ansible.
                 </p>
+                <p>
+                  Throughout my journey, I've developed numerous projects showcasing my diverse skill set. 
+                  From creating containerized Flask applications and Django-based notes systems to building 
+                  voting applications in C# and expense tracking tools, I enjoy tackling challenges across 
+                  the full technology stack. My repository includes automation scripts in Bash, Kubernetes 
+                  configurations, Terraform infrastructure definitions, and data structure implementations 
+                  in C++ and Java.
+                </p>
+                <p>
+                  What drives me is the intersection of development and operations - creating seamless workflows 
+                  that bridge the gap between code and production. Whether it's designing CI/CD pipelines, 
+                  orchestrating containerized services, or optimizing cloud infrastructure for performance and 
+                  cost-effectiveness, I'm passionate about building systems that scale and empower development teams.
+                </p>
               </div>
             </div>
             
