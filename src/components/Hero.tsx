@@ -67,20 +67,20 @@ const Hero = () => {
                 </Button>
               </div>
               
-              <div className="flex gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
+              <div className="flex gap-6 md:gap-8 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
                 <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300 hover:scale-110">
-                    <Github className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:shadow-glow group-hover:bg-gradient-primary/40 transition-all duration-300 hover:scale-110 border border-primary/20">
+                    <Github className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                 </a>
                 <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="group">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300 hover:scale-110">
-                    <Linkedin className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:shadow-glow group-hover:bg-gradient-primary/40 transition-all duration-300 hover:scale-110 border border-primary/20">
+                    <Linkedin className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                 </a>
                 <a href="mailto:your.email@example.com" className="group">
-                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300 hover:scale-110">
-                    <Mail className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
+                  <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:shadow-glow group-hover:bg-gradient-primary/40 transition-all duration-300 hover:scale-110 border border-primary/20">
+                    <Mail className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                 </a>
               </div>
