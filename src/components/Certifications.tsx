@@ -195,19 +195,19 @@ const Certifications = () => {
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-4 md:p-6">
-                <div className="space-y-3 md:space-y-4">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-secondary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
-                      <Award className="h-4 w-4 md:h-5 md:w-5 text-secondary-foreground" />
+                  <div className="space-y-3 md:space-y-4">
+                    <div className="flex items-center gap-3">
+                      <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300">
+                        <Award className="h-4 w-4 md:h-5 md:w-5 text-primary-foreground" />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight truncate">
+                          {cert.title}
+                        </h4>
+                      </div>
                     </div>
-                    <div className="flex-1 min-w-0">
-                      <h4 className="font-semibold text-foreground group-hover:text-primary transition-colors text-sm leading-tight truncate">
-                        {cert.title}
-                      </h4>
-                    </div>
-                  </div>
-                  
-                  <p className="text-secondary font-medium text-sm">{cert.issuer}</p>
+                    
+                    <p className="text-primary font-medium text-sm">{cert.issuer}</p>
                   
                   <div className="flex items-center gap-2 text-xs text-muted-foreground">
                     <Calendar className="h-3 w-3 flex-shrink-0" />
@@ -218,17 +218,17 @@ const Certifications = () => {
                     {cert.description}
                   </p>
                   
-                  <div className="flex flex-wrap gap-1">
-                    {cert.skills.map((skill) => (
-                      <Badge 
-                        key={skill} 
-                        variant="outline" 
-                        className="text-xs border-secondary/30 text-secondary hover:bg-secondary hover:text-secondary-foreground transition-colors"
-                      >
-                        {skill}
-                      </Badge>
-                    ))}
-                  </div>
+                    <div className="flex flex-wrap gap-1">
+                      {cert.skills.map((skill) => (
+                        <Badge 
+                          key={skill} 
+                          variant="outline" 
+                          className="text-xs border-primary/30 text-primary hover:bg-primary hover:text-primary-foreground transition-colors"
+                        >
+                          {skill}
+                        </Badge>
+                      ))}
+                    </div>
                 </div>
               </CardContent>
             </Card>

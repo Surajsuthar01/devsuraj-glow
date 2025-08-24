@@ -68,36 +68,21 @@ const Hero = () => {
               </div>
               
               <div className="flex gap-3 md:gap-4 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
-                <Button 
-                  variant="ghost" 
-                  size="lg" 
-                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 p-4"
-                  asChild
-                >
-                  <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Github className="h-10 w-10 md:h-12 md:w-12" />
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="lg" 
-                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 p-4"
-                  asChild
-                >
-                  <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer">
-                    <Linkedin className="h-10 w-10 md:h-12 md:w-12" />
-                  </a>
-                </Button>
-                <Button 
-                  variant="ghost" 
-                  size="lg" 
-                  className="hover:bg-primary/10 hover:text-primary transition-all duration-300 hover:scale-110 p-4"
-                  asChild
-                >
-                  <a href="mailto:your.email@example.com">
-                    <Mail className="h-10 w-10 md:h-12 md:w-12" />
-                  </a>
-                </Button>
+                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="group">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300 hover:scale-110">
+                    <Github className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
+                  </div>
+                </a>
+                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="group">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300 hover:scale-110">
+                    <Linkedin className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
+                  </div>
+                </a>
+                <a href="mailto:your.email@example.com" className="group">
+                  <div className="w-16 h-16 md:w-20 md:h-20 bg-gradient-primary rounded-lg flex items-center justify-center group-hover:shadow-glow transition-all duration-300 hover:scale-110">
+                    <Mail className="h-8 w-8 md:h-10 md:w-10 text-primary-foreground" />
+                  </div>
+                </a>
               </div>
             </div>
           </div>
