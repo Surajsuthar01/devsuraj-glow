@@ -68,17 +68,17 @@ const Hero = () => {
               </div>
               
               <div className="flex gap-6 md:gap-8 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
-                <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" className="group">
+                <a href="https://github.com/Surajsuthar01" target="_blank" rel="noopener noreferrer" className="group">
                   <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:shadow-glow group-hover:bg-gradient-primary/40 transition-all duration-300 hover:scale-110 border border-primary/20">
                     <Github className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                 </a>
-                <a href="https://linkedin.com/in/yourusername" target="_blank" rel="noopener noreferrer" className="group">
+                <a href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/" target="_blank" rel="noopener noreferrer" className="group">
                   <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:shadow-glow group-hover:bg-gradient-primary/40 transition-all duration-300 hover:scale-110 border border-primary/20">
                     <Linkedin className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
                 </a>
-                <a href="mailto:your.email@example.com" className="group">
+                <a href="mailto:surajsuthar0654@gmail.com" className="group">
                   <div className="w-8 h-8 md:w-10 md:h-10 bg-gradient-primary/20 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:shadow-glow group-hover:bg-gradient-primary/40 transition-all duration-300 hover:scale-110 border border-primary/20">
                     <Mail className="h-4 w-4 md:h-5 md:w-5 text-primary" />
                   </div>
