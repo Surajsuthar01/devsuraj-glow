@@ -57,34 +57,47 @@ const About = () => {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
                 <p>
-                  I'm a DevOps Engineer and System Administrator with expertise in cloud technologies 
-                  and infrastructure automation.
+                  I'm a passionate DevOps Engineer and System Administrator with extensive expertise in cloud technologies, 
+                  infrastructure automation, and full-stack development. My journey in technology is driven by a deep 
+                  fascination with creating robust, scalable systems that bridge the gap between development and operations.
                 </p>
                 <p>
-                  With a background in Computer Science and a passion for automation, I've developed 
-                  a strong foundation in Linux systems, containerization, and cloud infrastructure. 
-                  I believe in creating efficient, reliable systems that empower teams to deliver 
-                  better software faster.
+                  With an academic foundation in Computer Science and practical experience in enterprise-grade solutions, 
+                  I've cultivated a comprehensive skill set spanning multiple domains. My approach combines traditional 
+                  system administration with modern DevOps practices, ensuring that infrastructure not only meets current 
+                  needs but scales seamlessly for future growth.
                 </p>
                 <p>
-                  As a Red Hat Certified System Administrator (RHCSA), I specialize in building and 
-                  maintaining robust infrastructure solutions. My expertise spans across AWS cloud services, 
-                  Docker containerization, Kubernetes orchestration, CI/CD pipelines with Jenkins, 
-                  and infrastructure as code with Terraform and Ansible.
+                  As a Red Hat Certified System Administrator (RHCSA), I specialize in Linux system management, security 
+                  hardening, and performance optimization. My expertise extends across AWS cloud services, Docker 
+                  containerization, Kubernetes orchestration, CI/CD pipeline design with Jenkins, and infrastructure 
+                  as code using Terraform and Ansible. I believe in automation-first approaches that eliminate manual 
+                  errors and accelerate deployment cycles.
                 </p>
                 <p>
-                  Throughout my journey, I've developed numerous projects showcasing my diverse skill set. 
-                  From creating containerized Flask applications and Django-based notes systems to building 
-                  voting applications in C# and expense tracking tools, I enjoy tackling challenges across 
-                  the full technology stack. My repository includes automation scripts in Bash, Kubernetes 
-                  configurations, Terraform infrastructure definitions, and data structure implementations 
-                  in C++ and Java.
+                  My GitHub portfolio showcases a diverse range of projects that demonstrate my technical versatility. 
+                  I've developed containerized Flask applications with Docker integration, built comprehensive Django-based 
+                  note management systems, and created sophisticated voting applications using C# and .NET frameworks. 
+                  My expense tracking tools incorporate modern database design patterns and RESTful API architectures.
                 </p>
                 <p>
-                  What drives me is the intersection of development and operations - creating seamless workflows 
-                  that bridge the gap between code and production. Whether it's designing CI/CD pipelines, 
-                  orchestrating containerized services, or optimizing cloud infrastructure for performance and 
-                  cost-effectiveness, I'm passionate about building systems that scale and empower development teams.
+                  Beyond application development, I've implemented complex infrastructure solutions including multi-environment 
+                  Kubernetes clusters, automated deployment pipelines, and cloud-native monitoring systems. My Terraform 
+                  configurations manage everything from AWS VPC setups to auto-scaling groups, while my Ansible playbooks 
+                  ensure consistent server configurations across development, staging, and production environments.
+                </p>
+                <p>
+                  My programming proficiency spans multiple languages and frameworks - from Python and Flask for rapid 
+                  prototyping to Java and C++ for performance-critical applications. I've implemented complex data structures, 
+                  algorithms, and system designs that demonstrate both theoretical knowledge and practical application. 
+                  My Bash automation scripts streamline repetitive operations and enhance operational efficiency.
+                </p>
+                <p>
+                  What truly excites me about DevOps is the continuous evolution of the field. Whether I'm designing 
+                  fault-tolerant microservices architectures, implementing advanced monitoring with Prometheus and Grafana, 
+                  or optimizing CI/CD workflows for faster time-to-market, I approach each challenge with curiosity and 
+                  a commitment to best practices. I'm passionate about creating systems that not only work today but 
+                  adapt and scale for tomorrow's requirements.
                 </p>
               </div>
             </div>

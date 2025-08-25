@@ -90,19 +90,20 @@ const Hero = () => {
           {/* Profile Image */}
           <div className="flex justify-center lg:justify-end animate-slide-in-right order-1 lg:order-2">
             <div className="relative">
-              <div className="absolute -inset-4 bg-gradient-primary rounded-full blur-lg opacity-30 animate-glow-pulse"></div>
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-4 border-primary/30 shadow-elegant bg-gradient-card">
+              <div className="absolute -inset-6 bg-gradient-primary rounded-full blur-xl opacity-40 animate-glow-pulse"></div>
+              <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[26rem] md:h-[26rem] lg:w-[30rem] lg:h-[30rem] rounded-full overflow-hidden border-4 border-primary/40 shadow-elegant bg-gradient-to-br from-primary/10 via-background to-secondary/10">
                 <img 
                   src="/lovable-uploads/7d75b1cd-eec9-42d5-b7b1-74e5e91bab41.png" 
                   alt="Suraj Suthar - DevOps Engineer" 
-                  className="w-full h-full object-cover object-center scale-110 hover:scale-125 transition-transform duration-500"
+                  className="w-full h-full object-cover object-center scale-125 hover:scale-140 transition-transform duration-700"
                   style={{ 
-                    filter: 'contrast(1.1) brightness(1.05)',
-                    backgroundBlendMode: 'multiply'
+                    filter: 'contrast(1.2) brightness(1.1) saturate(1.1)',
+                    mixBlendMode: 'luminosity'
                   }}
                 />
-                <div className="absolute inset-0 bg-gradient-primary/10 opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-full"></div>
-                <div className="absolute inset-0 rounded-full bg-gradient-to-t from-transparent via-transparent to-primary/5"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-primary/20 rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40 rounded-full"></div>
+                <div className="absolute inset-0 bg-gradient-primary/15 opacity-0 hover:opacity-100 transition-opacity duration-500 rounded-full"></div>
               </div>
               
               {/* Orbiting tech badges */}
