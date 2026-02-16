@@ -8,102 +8,99 @@
 
 @layer base {
   :root {
-    /* Light mode - ChatGPT inspired clean white */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 7%;
+    /* Light mode - warm elegant */
+    --background: 30 20% 98%;
+    --foreground: 220 30% 10%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 7%;
+    --card: 30 15% 97%;
+    --card-foreground: 220 30% 10%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 7%;
+    --popover: 30 15% 97%;
+    --popover-foreground: 220 30% 10%;
 
-    /* Primary - Purple theme #9381ff */
-    --primary: 257 100% 75%;
+    /* Primary - Deep indigo/navy */
+    --primary: 235 60% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-glow: 257 100% 85%;
+    --primary-glow: 250 70% 65%;
 
-    /* Secondary - Complementary green */
-    --secondary: 142 76% 36%;
-    --secondary-foreground: 0 0% 98%;
+    /* Secondary - Warm gold accent matching profile pic */
+    --secondary: 38 80% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 220 15% 93%;
+    --muted-foreground: 220 10% 45%;
 
-    --accent: 257 100% 80%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 250 60% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 257 100% 75%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 235 60% 52%;
 
     --radius: 0.75rem;
 
-    /* Light mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(257, 100%, 75%), hsl(257, 100%, 85%));
-    --gradient-secondary: linear-gradient(135deg, hsl(280, 100%, 70%), hsl(280, 100%, 80%));
-    --gradient-background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 0%, 98%));
-    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 0%, 97%));
-    --gradient-hero: radial-gradient(ellipse at top, hsl(257, 100%, 75% / 8%), transparent),
-                     radial-gradient(ellipse at bottom right, hsl(280, 100%, 70% / 5%), transparent);
+    --gradient-primary: linear-gradient(135deg, hsl(235, 60%, 52%), hsl(250, 70%, 65%));
+    --gradient-secondary: linear-gradient(135deg, hsl(38, 80%, 55%), hsl(45, 90%, 65%));
+    --gradient-background: linear-gradient(135deg, hsl(30, 20%, 98%), hsl(220, 20%, 96%));
+    --gradient-card: linear-gradient(135deg, hsl(30, 15%, 97%), hsl(220, 15%, 96%));
+    --gradient-hero: radial-gradient(ellipse at top, hsl(235, 60%, 52% / 8%), transparent),
+                     radial-gradient(ellipse at bottom right, hsl(38, 80%, 55% / 6%), transparent);
 
-    /* Light mode shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(257, 100%, 75% / 15%);
-    --shadow-glow: 0 0 40px hsl(257, 100%, 75% / 10%);
+    --shadow-elegant: 0 10px 30px -10px hsl(235, 60%, 52% / 15%);
+    --shadow-glow: 0 0 40px hsl(235, 60%, 52% / 12%);
     --shadow-card: 0 4px 20px hsl(0, 0%, 0% / 8%);
 
-    /* Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
 
   .dark {
-    /* Dark mode - ChatGPT inspired deep black */
-    --background: 0 0% 8%;
-    --foreground: 0 0% 95%;
+    /* Dark mode - Deep navy like adrianhajdin portfolio */
+    --background: 225 30% 6%;
+    --foreground: 210 20% 92%;
 
-    --card: 0 0% 8%;
-    --card-foreground: 0 0% 95%;
+    --card: 225 25% 9%;
+    --card-foreground: 210 20% 92%;
 
-    --popover: 0 0% 8%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 225 25% 9%;
+    --popover-foreground: 210 20% 92%;
 
-    /* Primary - Purple theme for dark mode */
-    --primary: 257 100% 75%;
-    --primary-foreground: 0 0% 8%;
-    --primary-glow: 257 100% 85%;
+    /* Primary - Vivid indigo/purple */
+    --primary: 250 70% 65%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 260 80% 75%;
 
-    /* Secondary - Bright green for dark mode */
-    --secondary: 142 76% 46%;
-    --secondary-foreground: 0 0% 9%;
+    /* Secondary - Warm gold */
+    --secondary: 38 80% 55%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 225 20% 14%;
+    --muted-foreground: 220 15% 55%;
 
-    --accent: 257 100% 80%;
+    --accent: 250 60% 60%;
     --accent-foreground: 0 0% 98%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 257 100% 75%;
+    --border: 225 20% 16%;
+    --input: 225 20% 16%;
+    --ring: 250 70% 65%;
 
-    /* Dark mode gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(257, 100%, 75%), hsl(257, 100%, 85%));
-    --gradient-secondary: linear-gradient(135deg, hsl(280, 100%, 70%), hsl(280, 100%, 80%));
-    --gradient-background: linear-gradient(135deg, hsl(0, 0%, 3.9%), hsl(0, 0%, 7%));
-    --gradient-card: linear-gradient(135deg, hsl(0, 0%, 3.9%), hsl(0, 0%, 8%));
-    --gradient-hero: radial-gradient(ellipse at top, hsl(257, 100%, 75% / 12%), transparent),
-                     radial-gradient(ellipse at bottom right, hsl(280, 100%, 70% / 8%), transparent);
+    /* Dark mode gradients - deep navy with purple/gold accents */
+    --gradient-primary: linear-gradient(135deg, hsl(250, 70%, 65%), hsl(260, 80%, 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(38, 80%, 55%), hsl(45, 90%, 65%));
+    --gradient-background: linear-gradient(135deg, hsl(225, 30%, 4%), hsl(225, 30%, 8%));
+    --gradient-card: linear-gradient(135deg, hsl(225, 25%, 7%), hsl(225, 25%, 10%));
+    --gradient-hero: radial-gradient(ellipse at top left, hsl(250, 70%, 65% / 15%), transparent 50%),
+                     radial-gradient(ellipse at bottom right, hsl(280, 60%, 50% / 10%), transparent 50%),
+                     radial-gradient(ellipse at center, hsl(225, 30%, 6%), hsl(225, 30%, 4%));
 
-    /* Dark mode shadows */
-    --shadow-elegant: 0 10px 30px -10px hsl(257, 100%, 75% / 25%);
-    --shadow-glow: 0 0 40px hsl(257, 100%, 75% / 20%);
+    --shadow-elegant: 0 10px 30px -10px hsl(250, 70%, 65% / 25%);
+    --shadow-glow: 0 0 40px hsl(250, 70%, 65% / 20%);
     --shadow-card: 0 4px 20px hsl(0, 0%, 0% / 50%);
   }
 }
