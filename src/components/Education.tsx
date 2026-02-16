@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
-import FloatingLogos from "./FloatingLogos";
+
 
 const education = [
   {
@@ -32,7 +32,7 @@ const Education = () => {
         <div className="absolute top-20 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl animate-float"></div>
         <div className="absolute bottom-20 right-10 w-40 h-40 bg-secondary/5 rounded-full blur-xl animate-float" style={{ animationDelay: '1s' }}></div>
       </div>
-      <FloatingLogos section="education" />
+      
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
