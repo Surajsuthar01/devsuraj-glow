@@ -8,7 +8,6 @@ import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import CertificationDetail from "./pages/CertificationDetail";
 import ToolDetail from "./pages/ToolDetail";
-import ThemeToggle from "./components/ThemeToggle";
 
 const queryClient = new QueryClient();
 
@@ -18,7 +17,6 @@ const App = () => (
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        <ThemeToggle />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
