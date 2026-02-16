@@ -61,10 +61,12 @@ const Hero = () => {
                   <span>Explore My Skills</span>
                   <ArrowDown className="ml-2 h-4 w-4 group-hover:translate-y-1 transition-transform" />
                 </Button>
-                <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm md:text-base">
-                  <Download className="mr-2 h-4 w-4" />
-                  Download Resume
-                </Button>
+                <a href="/Suraj_Resume.pdf" download="Suraj_Suthar_Resume.pdf">
+                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-sm md:text-base">
+                    <Download className="mr-2 h-4 w-4" />
+                    Download Resume
+                  </Button>
+                </a>
               </div>
               
               <div className="flex gap-6 md:gap-8 justify-center lg:justify-start animate-fade-in" style={{ animationDelay: '1s' }}>
@@ -93,13 +95,9 @@ const Hero = () => {
               <div className="absolute -inset-6 bg-gradient-primary rounded-full blur-xl opacity-40 animate-glow-pulse"></div>
               <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[26rem] md:h-[26rem] lg:w-[30rem] lg:h-[30rem] rounded-full overflow-hidden border-4 border-primary/40 shadow-elegant bg-gradient-to-br from-primary/10 via-background to-secondary/10">
                 <img 
-                  src="/lovable-uploads/7d75b1cd-eec9-42d5-b7b1-74e5e91bab41.png" 
+                  src="/images/suraj-profile.png" 
                   alt="Suraj Suthar - DevOps Engineer" 
-                  className="w-full h-full object-cover object-center scale-125 hover:scale-140 transition-transform duration-700"
-                  style={{ 
-                    filter: 'contrast(1.2) brightness(1.1) saturate(1.1)',
-                    mixBlendMode: 'luminosity'
-                  }}
+                  className="w-full h-full object-cover object-top scale-110 hover:scale-125 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/60 via-transparent to-primary/20 rounded-full"></div>
                 <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-background/40 rounded-full"></div>
