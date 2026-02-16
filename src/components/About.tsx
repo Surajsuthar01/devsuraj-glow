@@ -1,7 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Server, Cloud, Container, Settings, Monitor, Code } from "lucide-react";
-import FloatingLogos from "./FloatingLogos";
+
 
 const specializations = [
   {
@@ -45,8 +45,6 @@ const specializations = [
 const About = () => {
   return (
     <section className="py-12 md:py-20 relative">
-      <FloatingLogos section="about" />
-      
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* About Content */}

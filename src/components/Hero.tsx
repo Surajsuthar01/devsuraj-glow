@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowDown, Github, Linkedin, Mail, Download } from "lucide-react";
 import surajProfile from "@/assets/suraj-profile.png";
-import FloatingLogos from "./FloatingLogos";
+
 
 const Hero = () => {
   return (
@@ -25,8 +25,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Enhanced Floating Tech Elements */}
-      <FloatingLogos section="hero" />
 
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">

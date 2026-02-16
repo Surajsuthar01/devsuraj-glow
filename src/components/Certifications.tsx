@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink, Award, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import FloatingLogos from "./FloatingLogos";
+
 
 const certifications = [
   {
@@ -98,7 +98,7 @@ const Certifications = () => {
       <div className="absolute inset-0 opacity-30">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-primary/3 to-secondary/3"></div>
       </div>
-      <FloatingLogos section="certifications" />
+      
       
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="text-center mb-12 md:mb-16 animate-fade-in">
