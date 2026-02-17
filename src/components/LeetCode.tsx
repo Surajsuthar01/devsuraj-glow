@@ -4,13 +4,15 @@ import { ExternalLink } from "lucide-react";
 const LeetCode = () => {
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
+      <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         {/* Header */}
         <div className="text-center mb-12 md:mb-16">
           <p className="text-secondary font-mono text-sm tracking-widest uppercase mb-4">
             LeetCode
           </p>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-4">
             Problem-solving profile, rank, and contest snapshot
           </h2>
           <p className="text-muted-foreground text-base md:text-lg">

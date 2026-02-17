@@ -12,6 +12,8 @@ const Contact = () => {
 
   return (
     <section className="py-20 md:py-28 relative overflow-hidden">
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="rounded-2xl border border-border/50 bg-gradient-to-br from-card/80 via-card/60 to-secondary/5 backdrop-blur-sm p-8 md:p-12">
@@ -22,7 +24,7 @@ const Contact = () => {
                   <p className="text-secondary font-mono text-sm tracking-widest uppercase mb-3">
                     Contact
                   </p>
-                  <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
+                  <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-tight">
                     Let us build the next deployment-ready product
                   </h2>
                 </div>
