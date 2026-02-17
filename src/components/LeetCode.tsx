@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
+import { GlowCard } from "@/components/ui/glow-card";
 
 const LeetCode = () => {
   return (
@@ -22,7 +23,7 @@ const LeetCode = () => {
 
         {/* Content Card */}
         <div className="max-w-4xl mx-auto">
-          <div className="rounded-2xl border border-border/50 bg-card/50 backdrop-blur-sm p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center">
+          <GlowCard className="bg-card/40 backdrop-blur-md border-primary/10 p-6 md:p-10 flex flex-col md:flex-row gap-8 items-center rounded-2xl">
             {/* Left: Description */}
             <div className="flex-1 space-y-4">
               <h3 className="text-xl md:text-2xl font-bold text-foreground">
@@ -66,7 +67,7 @@ const LeetCode = () => {
                 loading="lazy"
               />
             </div>
-          </div>
+          </GlowCard>
         </div>
       </div>
     </section>

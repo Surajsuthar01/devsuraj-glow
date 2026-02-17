@@ -1,4 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/glow-card";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
@@ -93,9 +94,9 @@ const TechStack = () => {
         
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 md:gap-6">
           {techStack.map((tech, index) => (
-            <Card 
+            <GlowCard 
               key={tech.id} 
-              className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-3 hover:scale-[1.05] hover:border-primary/40 bg-gradient-card border-primary/10 animate-bounce-in cursor-pointer"
+              className="group bg-card/40 backdrop-blur-md border-primary/10 animate-bounce-in cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Link to={`/tool/${tech.id}`}>
@@ -134,7 +135,7 @@ const TechStack = () => {
                   </div>
                 </CardContent>
               </Link>
-            </Card>
+            </GlowCard>
           ))}
         </div>
       </div>

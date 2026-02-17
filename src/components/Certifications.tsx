@@ -1,4 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/glow-card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Calendar, ExternalLink, Award, ArrowRight } from "lucide-react";
@@ -115,9 +116,9 @@ const Certifications = () => {
           <h3 className="text-xl md:text-2xl font-bold mb-6 md:mb-8 text-center">Professional Certifications</h3>
           <div className="grid md:grid-cols-2 gap-6 lg:gap-8">
             {certifications.map((cert, index) => (
-              <Card 
+              <GlowCard 
                 key={cert.id}
-                className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/40 bg-gradient-card border-primary/10 animate-slide-up overflow-hidden cursor-pointer"
+                className="group bg-card/40 backdrop-blur-md border-primary/10 animate-slide-up cursor-pointer"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <Link to={`/certification/${cert.id}`}>
@@ -179,7 +180,7 @@ const Certifications = () => {
                     </div>
                   </CardContent>
                 </Link>
-              </Card>
+              </GlowCard>
             ))}
           </div>
         </div>
@@ -189,9 +190,9 @@ const Certifications = () => {
           <h3 className="text-2xl font-bold mb-8 text-center">AWS Educate Certifications</h3>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {awsCertifications.map((cert, index) => (
-            <Card 
+            <GlowCard 
               key={cert.title}
-              className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:border-primary/40 bg-gradient-card border-primary/10 animate-bounce-in"
+              className="group bg-card/40 backdrop-blur-md border-primary/10 animate-bounce-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-4 md:p-6">
@@ -231,7 +232,7 @@ const Certifications = () => {
                     </div>
                 </div>
               </CardContent>
-            </Card>
+            </GlowCard>
           ))}
         </div>
         </div>
