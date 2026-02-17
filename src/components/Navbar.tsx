@@ -43,8 +43,8 @@ const Navbar = () => {
     <nav
       className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full px-14 py-4 ${
         isScrolled
-          ? "bg-background/80 backdrop-blur-xl border border-border/40 shadow-lg"
-          : "bg-background/50 backdrop-blur-md border border-border/20"
+          ? "bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] ring-1 ring-white/5"
+          : "bg-background/40 backdrop-blur-xl border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
       }`}
     >
       <div className="flex items-center gap-4">
@@ -55,7 +55,7 @@ const Navbar = () => {
             <button
               key={item.id}
               onClick={() => scrollTo(item.id)}
-              className={`px-4 py-2 text-sm font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
+              className={`px-5 py-2.5 text-[15px] font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
                 isActive
                   ? "text-secondary bg-secondary/10"
                   : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
@@ -74,7 +74,7 @@ const Navbar = () => {
           href="https://github.com/Surajsuthar01"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50"
+          className="px-4 py-2.5 text-[15px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50"
         >
           GitHub
         </a>
@@ -82,14 +82,14 @@ const Navbar = () => {
           href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/"
           target="_blank"
           rel="noopener noreferrer"
-          className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50"
+          className="px-4 py-2.5 text-[15px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50"
         >
           LinkedIn
         </a>
         <a
           href="/Suraj_Resume.pdf"
           download="Suraj_Suthar_Resume.pdf"
-          className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50"
+          className="px-4 py-2.5 text-[15px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50"
         >
           Resume
         </a>
@@ -97,7 +97,7 @@ const Navbar = () => {
         {/* Theme toggle */}
         <button
           onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          className="ml-1 px-4 py-2 text-sm font-medium rounded-full border border-secondary/30 text-secondary hover:bg-secondary/10 transition-all duration-300 flex items-center gap-2"
+          className="ml-1 px-5 py-2.5 text-[15px] font-medium rounded-full border border-secondary/30 text-secondary hover:bg-secondary/10 transition-all duration-300 flex items-center gap-2"
         >
           {theme === "light" ? (
             <Moon className="h-4 w-4" />
