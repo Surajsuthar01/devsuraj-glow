@@ -1,4 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/glow-card";
 import { Badge } from "@/components/ui/badge";
 import { GraduationCap, Calendar, MapPin } from "lucide-react";
 
@@ -43,9 +44,9 @@ const Education = () => {
 
         <div className="max-w-4xl mx-auto space-y-6 md:space-y-8">
           {education.map((edu, index) => (
-            <Card 
+            <GlowCard 
               key={edu.institution}
-              className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/40 bg-gradient-card border-primary/10 animate-slide-up overflow-hidden"
+              className="group bg-card/40 backdrop-blur-md border-primary/10 animate-slide-up"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <CardContent className="p-4 md:p-6 lg:p-8">
@@ -113,7 +114,7 @@ const Education = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </GlowCard>
           ))}
         </div>
       </div>

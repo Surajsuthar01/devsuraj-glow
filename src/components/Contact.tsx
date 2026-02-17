@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, Phone, MapPin, Copy } from "lucide-react";
+import { GlowCard } from "@/components/ui/glow-card";
 import { useToast } from "@/hooks/use-toast";
 
 const Contact = () => {
@@ -16,7 +17,7 @@ const Contact = () => {
       <div className="absolute bottom-0 left-1/3 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
-          <div className="rounded-2xl border border-border/50 bg-gradient-to-br from-card/80 via-card/60 to-secondary/5 backdrop-blur-sm p-8 md:p-12">
+          <GlowCard className="bg-card/40 backdrop-blur-md border-primary/10 p-8 md:p-12 rounded-2xl">
             <div className="flex flex-col lg:flex-row gap-10 items-start">
               {/* Left side */}
               <div className="flex-1 space-y-6">
@@ -105,7 +106,7 @@ const Contact = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </GlowCard>
         </div>
       </div>
     </section>

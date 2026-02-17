@@ -1,4 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
+import { CardContent } from "@/components/ui/card";
+import { GlowCard } from "@/components/ui/glow-card";
 import { Badge } from "@/components/ui/badge";
 import { Server, Cloud, Container, Settings, Monitor, Code } from "lucide-react";
 
@@ -103,7 +104,7 @@ const About = () => {
             </div>
             
             {/* Personal Info */}
-            <Card className="bg-gradient-card border-primary/10 shadow-card hover:shadow-[0_0_30px_hsl(35,85%,52%/0.15)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300">
+            <GlowCard className="bg-card/40 backdrop-blur-md border-primary/10 shadow-card">
               <CardContent className="p-4 md:p-6">
                 <h3 className="text-lg md:text-xl font-semibold mb-4 text-primary">Personal Info</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-sm">
@@ -125,7 +126,7 @@ const About = () => {
                   </div>
                 </div>
               </CardContent>
-            </Card>
+            </GlowCard>
           </div>
           
           {/* Specializations */}
@@ -134,9 +135,9 @@ const About = () => {
             
             <div className="grid gap-4 md:gap-6">
               {specializations.map((spec, index) => (
-                <Card 
+                <GlowCard 
                   key={spec.title}
-                  className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/40 bg-gradient-card border-primary/10 animate-fade-in"
+                  className="group bg-card/40 backdrop-blur-md border-primary/10 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-4 md:p-6">
@@ -168,7 +169,7 @@ const About = () => {
                       </div>
                     </div>
                   </CardContent>
-                </Card>
+                </GlowCard>
               ))}
             </div>
           </div>
