@@ -117,7 +117,7 @@ const Certifications = () => {
             {certifications.map((cert, index) => (
               <Card 
                 key={cert.id}
-                className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-primary/10 animate-slide-up overflow-hidden cursor-pointer"
+                className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/40 bg-gradient-card border-primary/10 animate-slide-up overflow-hidden cursor-pointer"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <Link to={`/certification/${cert.id}`}>
@@ -191,7 +191,7 @@ const Certifications = () => {
           {awsCertifications.map((cert, index) => (
             <Card 
               key={cert.title}
-              className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card border-primary/10 animate-bounce-in"
+              className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.03] hover:border-primary/40 bg-gradient-card border-primary/10 animate-bounce-in"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <CardContent className="p-4 md:p-6">

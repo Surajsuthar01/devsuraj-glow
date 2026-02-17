@@ -18,12 +18,12 @@ const Hero = () => {
             <div className="space-y-5 md:space-y-7">
               <div className="space-y-3">
                 <p className="text-muted-foreground text-base md:text-lg font-mono tracking-wide">Hi, I'm</p>
-                <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold leading-tight">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
                     Suraj Suthar
                   </span>
                 </h1>
-                <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-foreground font-mono">
+                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-mono">
                   DevOps Engineer
                 </h2>
               </div>

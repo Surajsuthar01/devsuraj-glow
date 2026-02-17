@@ -103,7 +103,7 @@ const About = () => {
             </div>
             
             {/* Personal Info */}
-            <Card className="bg-gradient-card border-primary/10 shadow-card">
+            <Card className="bg-gradient-card border-primary/10 shadow-card hover:shadow-[0_0_30px_hsl(35,85%,52%/0.15)] hover:-translate-y-1 hover:border-primary/30 transition-all duration-300">
               <CardContent className="p-4 md:p-6">
                 <h3 className="text-lg md:text-xl font-semibold mb-4 text-primary">Personal Info</h3>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-4 text-sm">
@@ -136,7 +136,7 @@ const About = () => {
               {specializations.map((spec, index) => (
                 <Card 
                   key={spec.title}
-                  className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-1 bg-gradient-card border-primary/10 animate-fade-in"
+                  className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:border-primary/40 bg-gradient-card border-primary/10 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-4 md:p-6">
