@@ -6,6 +6,7 @@ import Education from "@/components/Education";
 import Contact from "@/components/Contact";
 import LeetCode from "@/components/LeetCode";
 import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <div id="certifications"><Certifications /></div>
       <div id="leetcode"><LeetCode /></div>
       <div id="contact"><Contact /></div>
+      <Footer />
     </div>
   );
 };

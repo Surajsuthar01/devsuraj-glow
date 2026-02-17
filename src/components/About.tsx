@@ -45,15 +45,17 @@ const specializations = [
 const About = () => {
   return (
     <section className="py-12 md:py-20 relative">
+      <div className="absolute top-0 left-1/3 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 right-1/4 w-80 h-80 bg-secondary/5 rounded-full blur-3xl pointer-events-none" />
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* About Content */}
           <div className="space-y-6 md:space-y-8 animate-slide-in-left">
             <div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 md:mb-6 bg-gradient-primary bg-clip-text text-transparent">
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6 bg-gradient-primary bg-clip-text text-transparent">
                 About Me
               </h2>
-              <div className="space-y-4 text-muted-foreground leading-relaxed text-sm md:text-base">
+              <div className="space-y-4 text-muted-foreground leading-relaxed text-base md:text-lg">
                 <p>
                   I'm a passionate DevOps Engineer and System Administrator with extensive expertise in cloud technologies, 
                   infrastructure automation, and full-stack development. My journey in technology is driven by a deep 
