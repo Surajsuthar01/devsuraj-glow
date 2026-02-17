@@ -41,13 +41,13 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full px-10 py-3 ${
+      className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full px-14 py-4 ${
         isScrolled
           ? "bg-background/80 backdrop-blur-xl border border-border/40 shadow-lg"
           : "bg-background/50 backdrop-blur-md border border-border/20"
       }`}
     >
-      <div className="flex items-center gap-3">
+      <div className="flex items-center gap-4">
         {/* Nav links */}
         {navLinks.map((item) => {
           const isActive = activeSection === item.id;
