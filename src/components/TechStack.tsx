@@ -95,7 +95,7 @@ const TechStack = () => {
           {techStack.map((tech, index) => (
             <Card 
               key={tech.id} 
-              className="group hover:shadow-elegant transition-all duration-300 hover:-translate-y-2 bg-gradient-card border-primary/10 animate-bounce-in cursor-pointer"
+              className="group hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] transition-all duration-300 hover:-translate-y-3 hover:scale-[1.05] hover:border-primary/40 bg-gradient-card border-primary/10 animate-bounce-in cursor-pointer"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <Link to={`/tool/${tech.id}`}>
