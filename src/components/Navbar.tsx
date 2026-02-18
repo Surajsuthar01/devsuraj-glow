@@ -82,13 +82,14 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Navbar */}
-      <div className="fixed top-2 right-2 z-50 md:hidden">
+      {/* Mobile/Tablet Navbar - always visible on small screens */}
+      <div className="fixed top-3 right-3 z-[60] block md:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2 rounded-full bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-lg ring-1 ring-white/5"
+          className="p-2.5 rounded-full bg-background/70 backdrop-blur-2xl border border-primary/20 shadow-lg ring-1 ring-white/10"
+          aria-label="Toggle menu"
         >
-          {mobileOpen ? <X className="h-4 w-4 text-foreground" /> : <Menu className="h-4 w-4 text-foreground" />}
+          {mobileOpen ? <X className="h-5 w-5 text-foreground" /> : <Menu className="h-5 w-5 text-foreground" />}
         </button>
       </div>
 
