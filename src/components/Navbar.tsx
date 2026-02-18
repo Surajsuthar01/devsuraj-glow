@@ -45,7 +45,7 @@ const Navbar = () => {
     <>
       {/* Desktop Navbar */}
       <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full px-8 py-2.5 hidden lg:block ${
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full px-8 py-2.5 hidden md:block ${
           isScrolled
             ? "bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] ring-1 ring-white/5"
             : "bg-background/40 backdrop-blur-xl border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
@@ -83,7 +83,7 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <div className="fixed top-2 right-2 z-50 lg:hidden">
+      <div className="fixed top-2 right-2 z-50 md:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="p-2 rounded-full bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-lg ring-1 ring-white/5"
@@ -94,7 +94,7 @@ const Navbar = () => {
 
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
-        <div className="fixed inset-0 z-40 lg:hidden">
+        <div className="fixed inset-0 z-40 md:hidden">
           <div className="absolute inset-0 bg-background/80 backdrop-blur-xl" onClick={() => setMobileOpen(false)} />
           <div className="relative z-50 flex flex-col items-center justify-center h-full gap-4">
             {navLinks.map((item) => {
