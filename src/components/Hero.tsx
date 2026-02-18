@@ -52,19 +52,19 @@ const Hero = () => {
               {/* Social buttons instead of icons */}
               <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <a href="https://github.com/Surajsuthar01" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="border-border/60 hover:border-primary hover:text-primary text-base px-6 py-5">
+                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow text-base px-6 py-5">
                     <Github className="mr-2 h-5 w-5" />
                     GitHub
                   </Button>
                 </a>
                 <a href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="border-border/60 hover:border-primary hover:text-primary text-base px-6 py-5">
+                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow text-base px-6 py-5">
                     <Linkedin className="mr-2 h-5 w-5" />
                     LinkedIn
                   </Button>
                 </a>
                 <a href="mailto:surajsuthar0654@gmail.com">
-                  <Button variant="outline" size="lg" className="border-border/60 hover:border-primary hover:text-primary text-base px-6 py-5">
+                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow text-base px-6 py-5">
                     <Mail className="mr-2 h-5 w-5" />
                     Email Me
                   </Button>
