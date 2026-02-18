@@ -83,12 +83,12 @@ const Navbar = () => {
       </nav>
 
       {/* Mobile Navbar */}
-      <div className="fixed top-3 right-3 z-50 lg:hidden">
+      <div className="fixed top-2 right-2 z-50 lg:hidden">
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-3 rounded-full bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-lg ring-1 ring-white/5"
+          className="p-2 rounded-full bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-lg ring-1 ring-white/5"
         >
-          {mobileOpen ? <X className="h-5 w-5 text-foreground" /> : <Menu className="h-5 w-5 text-foreground" />}
+          {mobileOpen ? <X className="h-4 w-4 text-foreground" /> : <Menu className="h-4 w-4 text-foreground" />}
         </button>
       </div>
 
