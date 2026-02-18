@@ -102,6 +102,26 @@ const certificationData = {
       "Perform penetration testing and security audits"
     ],
     industryValue: "Cybersecurity skills are critical in today's digital landscape. This certification with internship experience demonstrates practical ability to protect infrastructure and applications, making it highly valuable for DevOps and security-focused roles."
+  },
+  "nptel-os-fundamentals": {
+    title: "Operating System Fundamentals (Elite)",
+    issuer: "NPTEL - IIT Kharagpur",
+    date: "Jul - Oct 2025",
+    credentialId: "NPTEL25CS141S1258604640",
+    description: "12-week NPTEL course on Operating System Fundamentals from IIT Kharagpur. Achieved Elite certification with a consolidated score of 60%.",
+    fullDescription: "This comprehensive 12-week course from IIT Kharagpur covers fundamental concepts of operating systems including process management, memory management, file systems, CPU scheduling, and synchronization. The course included online assignments (scored 25/25) and a proctored exam (34.5/75), demonstrating both theoretical knowledge and practical understanding of OS internals.",
+    skills: ["Process Management", "Memory Management", "File Systems", "CPU Scheduling", "Synchronization", "Deadlock Handling", "I/O Management"],
+    objectives: [
+      "Understand process creation, scheduling, and inter-process communication",
+      "Implement memory management techniques including paging and segmentation",
+      "Analyze file system structures and storage management",
+      "Apply CPU scheduling algorithms and evaluate performance",
+      "Handle synchronization problems using semaphores and monitors",
+      "Detect and resolve deadlock situations",
+      "Understand I/O subsystems and device management",
+      "Apply OS concepts to real-world system design"
+    ],
+    industryValue: "Operating system fundamentals are essential for DevOps engineers, system administrators, and cloud engineers. Understanding OS internals helps in performance tuning, troubleshooting, containerization, and building efficient infrastructure."
   }
 };
 
