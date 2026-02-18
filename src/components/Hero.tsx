@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail, Download } from "lucide-react";
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 sm:px-0">
       {/* Simplified Background - just gradient, no heavy grid */}
       <div className="absolute inset-0 bg-gradient-hero" />
 
@@ -11,19 +11,19 @@ const Hero = () => {
       <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
       <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-secondary/6 rounded-full blur-3xl" />
 
-      <div className="container mx-auto px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
           {/* Content */}
           <div className="text-center lg:text-left order-2 lg:order-1">
             <div className="space-y-5 md:space-y-7">
               <div className="space-y-3">
                 <p className="text-muted-foreground text-base md:text-lg font-mono tracking-wide">Hi, I'm</p>
-                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
                     Suraj Suthar
                   </span>
                 </h1>
-                <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-mono">
+                <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-mono">
                   DevOps Engineer
                 </h2>
               </div>

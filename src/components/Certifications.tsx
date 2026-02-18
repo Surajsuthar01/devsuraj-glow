@@ -51,6 +51,15 @@ const certifications = [
     credentialId: "uk8+xf",
     description: "Comprehensive cybersecurity training program with practical internship experience. Covered advanced security concepts, threat analysis, and hands-on security implementations.",
     skills: ["Cybersecurity Fundamentals", "Threat Analysis", "Security Implementation", "Risk Assessment", "Incident Response"]
+  },
+  {
+    id: "nptel-os-fundamentals",
+    title: "Operating System Fundamentals (Elite)",
+    issuer: "NPTEL - IIT Kharagpur",
+    date: "Jul - Oct 2025",
+    credentialId: "NPTEL25CS141S1258604640",
+    description: "12-week NPTEL course on Operating System Fundamentals from IIT Kharagpur. Achieved Elite certification with a consolidated score of 60%. Online Assignments: 25/25, Proctored Exam: 34.5/75.",
+    skills: ["Process Management", "Memory Management", "File Systems", "Scheduling", "Synchronization"]
   }
 ];
 
