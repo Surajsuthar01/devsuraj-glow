@@ -28,9 +28,7 @@ const GlowCard = React.forwardRef<HTMLDivElement, GlowCardProps>(
         }}
         onMouseMove={handleMouseMove}
         className={cn(
-          "relative rounded-xl border bg-card/40 backdrop-blur-md text-card-foreground shadow-sm overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:scale-[1.02] hover:shadow-[0_0_30px_hsl(35,85%,52%/0.2)] hover:border-primary/40",
-          "before:pointer-events-none before:absolute before:inset-0 before:rounded-xl before:opacity-0 hover:before:opacity-100 before:transition-opacity before:duration-500",
-          "before:bg-[radial-gradient(400px_circle_at_var(--glow-x,50%)_var(--glow-y,50%),hsl(35,85%,52%/0.12),transparent_60%)]",
+          "glow-card relative rounded-lg border bg-card text-card-foreground overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-glow hover:border-primary/40 motion-reduce:transform-none",
           className
         )}
         {...props}

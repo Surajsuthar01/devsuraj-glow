@@ -1,110 +1,21 @@
 import { Button } from "@/components/ui/button";
-import { Github, Linkedin, Mail, Download } from "lucide-react";
+import { ArrowUpRight, Download, Github, Linkedin, Mail } from "lucide-react";
+import earth from "@/assets/orbital-earth.jpg";
 
-const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden px-2 sm:px-0">
-      {/* Simplified Background - just gradient, no heavy grid */}
-      <div className="absolute inset-0 bg-gradient-hero" />
-
-      {/* Ambient glow lights */}
-      <div className="absolute top-20 left-1/4 w-96 h-96 bg-primary/8 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 right-1/4 w-80 h-80 bg-secondary/6 rounded-full blur-3xl" />
-
-      <div className="container mx-auto px-3 sm:px-4 md:px-6 relative z-10">
-        <div className="grid lg:grid-cols-2 gap-6 lg:gap-12 items-center">
-          {/* Content */}
-          <div className="text-center lg:text-left order-2 lg:order-1">
-            <div className="space-y-5 md:space-y-7">
-              <div className="space-y-3">
-                <p className="text-muted-foreground text-base md:text-lg font-mono tracking-wide">Hi, I'm</p>
-                <h1 className="text-5xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                  <span className="bg-gradient-to-r from-primary via-primary-glow to-primary bg-clip-text text-transparent">
-                    Suraj Suthar
-                  </span>
-                </h1>
-                <h2 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-foreground font-mono">
-                  DevOps Engineer
-                </h2>
-              </div>
-              
-              <p className="text-base md:text-lg text-muted-foreground max-w-2xl leading-relaxed">
-                Specializing in <span className="text-primary font-semibold">Linux</span>, <span className="text-primary font-semibold">Docker</span>, <span className="text-primary font-semibold">AWS</span>, <span className="text-primary font-semibold">Kubernetes</span>, <span className="text-primary font-semibold">Ansible</span>, and <span className="text-primary font-semibold">Jenkins</span>. 
-                Building resilient cloud infrastructure and automating deployment pipelines.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
-                <Button 
-                  size="lg" 
-                  className="bg-gradient-primary hover:shadow-glow transition-all duration-300 text-base px-8 py-6"
-                  onClick={() => document.getElementById('tech-stack')?.scrollIntoView({ behavior: 'smooth' })}
-                >
-                  Explore My Skills
-                </Button>
-                <a href="/Suraj_Resume.pdf" download="Suraj_Suthar_Resume.pdf">
-                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground text-base px-8 py-6 w-full">
-                    <Download className="mr-2 h-5 w-5" />
-                    Download Resume
-                  </Button>
-                </a>
-              </div>
-              
-              {/* Social buttons instead of icons */}
-              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
-                <a href="https://github.com/Surajsuthar01" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow text-base px-6 py-5">
-                    <Github className="mr-2 h-5 w-5" />
-                    GitHub
-                  </Button>
-                </a>
-                <a href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/" target="_blank" rel="noopener noreferrer">
-                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow text-base px-6 py-5">
-                    <Linkedin className="mr-2 h-5 w-5" />
-                    LinkedIn
-                  </Button>
-                </a>
-                <a href="mailto:surajsuthar0654@gmail.com">
-                  <Button variant="outline" size="lg" className="border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-all duration-300 hover:shadow-glow text-base px-6 py-5">
-                    <Mail className="mr-2 h-5 w-5" />
-                    Email Me
-                  </Button>
-                </a>
-              </div>
-            </div>
-          </div>
-          
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end order-1 lg:order-2">
-            <div className="relative">
-              <div className="absolute -inset-6 bg-gradient-primary rounded-full blur-xl opacity-30"></div>
-              <div className="relative w-72 h-72 sm:w-80 sm:h-80 md:w-96 md:h-96 lg:w-[28rem] lg:h-[28rem] rounded-full overflow-hidden border-4 border-primary/40 shadow-elegant bg-gradient-to-br from-primary/10 via-background to-secondary/10">
-                <img 
-                  src="/images/suraj-profile.png" 
-                  alt="Suraj Suthar - DevOps Engineer" 
-                  className="w-full h-full object-cover object-top scale-110 hover:scale-120 transition-transform duration-700"
-                  loading="eager"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-background/50 via-transparent to-primary/10 rounded-full"></div>
-              </div>
-              
-              {/* Orbiting tech badges */}
-              <div className="absolute inset-0 pointer-events-none">
-                <div className="absolute top-4 md:top-8 right-4 md:right-8 p-2 bg-primary/20 backdrop-blur-sm rounded-full">
-                  <span className="text-xs font-bold text-primary">K8s</span>
-                </div>
-                <div className="absolute bottom-4 md:bottom-8 left-4 md:left-8 p-2 bg-secondary/20 backdrop-blur-sm rounded-full">
-                  <span className="text-xs font-bold text-secondary">AWS</span>
-                </div>
-                <div className="absolute top-1/2 right-0 p-2 bg-primary/20 backdrop-blur-sm rounded-full">
-                  <span className="text-xs font-bold text-primary">Docker</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Hero;
+export default function Hero() {
+  return <section id="hero" className="orbital-hero relative isolate overflow-hidden">
+    <img src={earth} width={1920} height={1024} alt="Earth's illuminated horizon from orbit" className="orbital-image absolute inset-0 h-full w-full object-cover" fetchPriority="high" />
+    <div className="hero-shade absolute inset-0" />
+    <div className="orbital-path orbital-path-one" aria-hidden="true" /><div className="orbital-path orbital-path-two" aria-hidden="true" />
+    <div className="site-container relative z-10 flex h-full flex-col justify-center pb-24 pt-32">
+      <p className="mb-7 flex items-center gap-3 text-xs font-mono text-hero-muted"><span className="h-1.5 w-1.5 rounded-full bg-primary" />DEVOPS ENGINEER · CLOUD & INFRASTRUCTURE</p>
+      <h1 className="hero-name text-hero-foreground">Suraj<br /><span className="text-primary">Suthar.</span></h1>
+      <p className="mt-6 max-w-lg text-xl font-medium text-hero-foreground sm:text-2xl">Engineering beyond the code.</p>
+      <p className="mt-4 max-w-md text-base leading-relaxed text-hero-muted">I build resilient cloud infrastructure, automate the repetitive, and bring reliable deployments to life.</p>
+      <div className="mt-8 flex flex-wrap gap-3"><Button asChild size="lg" className="h-12 px-6"><a href="#projects">Explore my work <ArrowUpRight /></a></Button><Button asChild variant="outline" size="lg" className="hero-outline h-12 px-6"><a href="/Suraj_Resume.pdf" download="Suraj_Suthar_Resume.pdf"><Download /> Download resume</a></Button></div>
+      <div className="mt-7 flex flex-wrap gap-2">{[{label:"GitHub",icon:Github,href:"https://github.com/Surajsuthar01"},{label:"LinkedIn",icon:Linkedin,href:"https://www.linkedin.com/in/suraj-suthar-7a088a28b/"},{label:"Email me",icon:Mail,href:"mailto:surajsuthar0654@gmail.com"}].map(social => <Button key={social.label} asChild variant="outline" size="sm" className="hero-outline border-hero-foreground/20 bg-transparent text-hero-muted"><a href={social.href} target={social.href.startsWith("https") ? "_blank" : undefined} rel="noopener noreferrer"><social.icon />{social.label}</a></Button>)}</div>
+      <div className="hero-coordinate hidden lg:block"><span className="text-primary">●</span> JAIPUR, INDIA<br /><span className="text-hero-muted">26.9124° N / 75.7873° E</span></div>
+    </div>
+    <div className="absolute inset-x-0 bottom-0 z-10 border-t border-hero-foreground/15"><div className="site-container flex flex-wrap items-center justify-between gap-3 py-5 text-xs text-hero-muted"><span>LINUX FOUNDATION. CLOUD MINDSET.</span><span className="flex items-center gap-2"><span className="h-1 w-1 rounded-full bg-primary" />RHCSA CERTIFIED</span><span className="hidden sm:inline">AUTOMATE. OBSERVE. IMPROVE.</span></div></div>
+  </section>;
+}
