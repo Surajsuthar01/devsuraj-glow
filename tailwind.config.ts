@@ -19,7 +19,7 @@ export default {
 		},
 		extend: {
 			fontFamily: {
-				inter: ['Inter', 'sans-serif'],
+				inter: ['Manrope', 'sans-serif'],
 				mono: ['JetBrains Mono', 'monospace'],
 			},
 			colors: {
@@ -28,6 +28,8 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+                'hero-foreground': 'hsl(var(--hero-foreground))',
+                'hero-muted': 'hsl(var(--hero-muted))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
 					foreground: 'hsl(var(--primary-foreground))',
@@ -118,7 +120,7 @@ export default {
 				},
 				glowPulse: {
 					'0%, 100%': { boxShadow: 'var(--shadow-glow)' },
-					'50%': { boxShadow: '0 0 60px hsl(270, 95%, 65% / 25%)' }
+					'50%': { boxShadow: '0 0 60px hsl(var(--primary) / 25%)' }
 				},
 				float: {
 					'0%, 100%': { transform: 'translateY(0px)' },

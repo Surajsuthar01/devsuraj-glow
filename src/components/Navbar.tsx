@@ -1,133 +1,43 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useTheme } from "next-themes";
-import { Sun, Moon, Menu, X } from "lucide-react";
+import { ArrowUpRight, Menu, Moon, Sun, X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
-const navLinks = [
-  { id: "hero", label: "Home" },
+const links = [
+  { id: "projects", label: "Projects" },
   { id: "about", label: "About" },
-  { id: "education", label: "Education" },
-  { id: "tech-stack", label: "Tech Stack" },
-  { id: "certifications", label: "Certifications" },
-  { id: "contact", label: "Contact" },
+  { id: "tech-stack", label: "Expertise" },
+  { id: "certifications", label: "Credentials" },
 ];
 
-const Navbar = () => {
-  const [activeSection, setActiveSection] = useState("hero");
-  const [isScrolled, setIsScrolled] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const { theme, setTheme } = useTheme();
-
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const { resolvedTheme, setTheme } = useTheme();
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
-      const sections = navLinks.map((item) => item.id);
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const el = document.getElementById(sections[i]);
-        if (el) {
-          const rect = el.getBoundingClientRect();
-          if (rect.top <= 200) {
-            setActiveSection(sections[i]);
-            break;
-          }
-        }
-      }
-    };
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  const scrollTo = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-    setMobileOpen(false);
-  };
-
+  useEffect(() => {
+    if (!open) return;
+    const closeOnEscape = (event: KeyboardEvent) => { if (event.key === "Escape") setOpen(false); };
+    window.addEventListener("keydown", closeOnEscape);
+    return () => window.removeEventListener("keydown", closeOnEscape);
+  }, [open]);
   return (
-    <>
-      {/* Desktop Navbar */}
-      <nav
-        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 transition-all duration-500 rounded-full px-8 py-2.5 hidden md:block ${
-          isScrolled
-            ? "bg-background/60 backdrop-blur-2xl border border-primary/10 shadow-[0_8px_32px_rgba(0,0,0,0.12)] ring-1 ring-white/5"
-            : "bg-background/40 backdrop-blur-xl border border-white/10 shadow-[0_4px_24px_rgba(0,0,0,0.08)]"
-        }`}
-      >
-        <div className="flex items-center gap-3">
-          {navLinks.map((item) => {
-            const isActive = activeSection === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => scrollTo(item.id)}
-                className={`px-5 py-2.5 text-[15px] font-medium transition-all duration-300 whitespace-nowrap rounded-full ${
-                  isActive
-                    ? "text-secondary bg-secondary/10"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50"
-                }`}
-              >
-                {item.label}
-              </button>
-            );
-          })}
-          <div className="w-px h-6 bg-border/40 mx-2" />
-          <a href="https://github.com/Surajsuthar01" target="_blank" rel="noopener noreferrer" className="px-4 py-2.5 text-[15px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50">GitHub</a>
-          <a href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/" target="_blank" rel="noopener noreferrer" className="px-4 py-2.5 text-[15px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50">LinkedIn</a>
-          <a href="/Suraj_Resume.pdf" download="Suraj_Suthar_Resume.pdf" className="px-4 py-2.5 text-[15px] text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap rounded-full hover:bg-muted/50">Resume</a>
-          <button
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-            className="ml-1 px-5 py-2.5 text-[15px] font-medium rounded-full border border-secondary/30 text-secondary hover:bg-secondary/10 transition-all duration-300 flex items-center gap-2"
-          >
-            {theme === "light" ? <Moon className="h-4 w-4" /> : <Sun className="h-4 w-4" />}
-            {theme === "light" ? "Dark" : "Light"}
-          </button>
+    <header className={`portfolio-nav fixed inset-x-0 top-0 z-50 border-b transition-colors ${scrolled || open ? "border-border bg-background/95 backdrop-blur-xl" : "border-foreground/10 bg-transparent"}`}>
+      <nav aria-label="Main navigation" className="site-container flex h-20 items-center justify-between gap-4">
+        <a href="#hero" className="flex items-center gap-2 text-foreground" onClick={() => setOpen(false)}><span className="brand-mark">s.</span><span className="text-sm font-semibold">suraj suthar<span className="text-primary">.</span></span></a>
+        <div className="hidden items-center gap-7 lg:flex">{links.map(link => <a key={link.id} href={`#${link.id}`} className="text-sm text-muted-foreground transition-colors hover:text-foreground">{link.label}</a>)}</div>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <Button variant="ghost" size="icon" aria-label={`Switch to ${resolvedTheme === "dark" ? "light" : "dark"} mode`} onClick={() => setTheme(resolvedTheme === "dark" ? "light" : "dark")} className="text-muted-foreground">{resolvedTheme === "dark" ? <Sun /> : <Moon />}</Button>
+          <Button asChild variant="outline" className="hidden border-foreground/25 bg-transparent sm:inline-flex"><a href="#contact">Let's talk <ArrowUpRight /></a></Button>
+          <Button variant="ghost" size="icon" className="lg:hidden" aria-label={open ? "Close menu" : "Open menu"} aria-expanded={open} aria-controls="mobile-navigation" onClick={() => setOpen(value => !value)}>{open ? <X /> : <Menu />}</Button>
         </div>
       </nav>
-
-      {/* Mobile/Tablet Navbar - always visible on small screens */}
-      <div className="fixed top-3 right-3 z-[60] block md:hidden">
-        <button
-          onClick={() => setMobileOpen(!mobileOpen)}
-          className="p-2.5 rounded-full bg-background/70 backdrop-blur-2xl border border-primary/20 shadow-lg ring-1 ring-white/10"
-          aria-label="Toggle menu"
-        >
-          {mobileOpen ? <X className="h-5 w-5 text-foreground" /> : <Menu className="h-5 w-5 text-foreground" />}
-        </button>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      {mobileOpen && (
-        <div className="fixed inset-0 z-40 md:hidden">
-          <div className="absolute inset-0 bg-background/80 backdrop-blur-xl" onClick={() => setMobileOpen(false)} />
-          <div className="relative z-50 flex flex-col items-center justify-center h-full gap-4">
-            {navLinks.map((item) => {
-              const isActive = activeSection === item.id;
-              return (
-                <button
-                  key={item.id}
-                  onClick={() => scrollTo(item.id)}
-                  className={`px-6 py-3 text-lg font-medium rounded-full transition-all ${
-                    isActive ? "text-secondary bg-secondary/10" : "text-muted-foreground hover:text-foreground"
-                  }`}
-                >
-                  {item.label}
-                </button>
-              );
-            })}
-            <div className="w-16 h-px bg-border/40 my-2" />
-            <a href="https://github.com/Surajsuthar01" target="_blank" rel="noopener noreferrer" className="text-lg text-muted-foreground hover:text-foreground">GitHub</a>
-            <a href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/" target="_blank" rel="noopener noreferrer" className="text-lg text-muted-foreground hover:text-foreground">LinkedIn</a>
-            <a href="/Suraj_Resume.pdf" download="Suraj_Suthar_Resume.pdf" className="text-lg text-muted-foreground hover:text-foreground">Resume</a>
-            <button
-              onClick={() => { setTheme(theme === "light" ? "dark" : "light"); setMobileOpen(false); }}
-              className="mt-2 px-6 py-3 text-lg font-medium rounded-full border border-secondary/30 text-secondary hover:bg-secondary/10 flex items-center gap-2"
-            >
-              {theme === "light" ? <Moon className="h-5 w-5" /> : <Sun className="h-5 w-5" />}
-              {theme === "light" ? "Dark" : "Light"}
-            </button>
-          </div>
-        </div>
-      )}
-    </>
+      {open && <nav id="mobile-navigation" aria-label="Mobile navigation" className="site-container flex flex-col gap-1 border-t border-border py-5 lg:hidden">{[...links, {id:"education",label:"Education"}, {id:"contact",label:"Contact"}].map(link => <a className="py-3 text-lg text-foreground" href={`#${link.id}`} key={link.id} onClick={() => setOpen(false)}>{link.label}</a>)}<a href="/Suraj_Resume.pdf" download className="py-3 text-primary">Download resume <ArrowUpRight className="inline h-4 w-4" /></a></nav>}
+    </header>
   );
-};
-
-export default Navbar; this my navbar file want the make the small the navber in the size wise the so that can cover the moblie phone and tablet 
+}
