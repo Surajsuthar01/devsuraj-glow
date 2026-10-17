@@ -1,30 +1,753 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Suraj Suthar - Cloud Engineer & DevOps Engineer</title>
-    <meta name="description" content="Professional DevOps Engineer specializing in Kubernetes, AWS, Docker, Ansible, and infrastructure automation. RHCSA certified with expertise in cloud solutions." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
-    <meta name="author" content="Suraj Suthar" />
-    <meta name="keywords" content="DevOps Engineer ,Cloud Infrastructure, AWS, Docker, Ansible, Jenkins, Terraform, Linux Administrator, Kubernetes Specialist" />
-    <link rel="canonical" href="https://devsuraj.online" />
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suraj Suthar — DevOps Engineer</title>
+  <meta name="description" content="Suraj Suthar — DevOps engineer from Jaipur, India. RHCSA certified. I automate how software is built, shipped and monitored with Docker, Kubernetes, Jenkins, Terraform and Grafana." />
+  <meta property="og:title" content="Suraj Suthar — DevOps Engineer" />
+  <meta property="og:description" content="I keep software running — automated, observable and calm in production." />
+  <meta property="og:image" content="https://suraj-suthar.vercel.app/images/suraj-profile.jpg" />
+  <meta name="theme-color" content="#09090b" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='16' fill='%2309090b'/><text x='50%' y='62%' text-anchor='middle' font-family='monospace' font-weight='700' font-size='26' fill='%23ff6a33'>&gt;_</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@300..900&family=Geist+Mono:wght@400..700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css?v=13" />
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      document.documentElement.dataset.theme = t || 'dark';
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
-    <meta property="og:title" content="Suraj Suthar - Cloud Engineer & DevOps Engineer" />
-    <meta property="og:description" content="Professional DevOps Engineer specializing in Kubernetes, AWS, Docker, Ansible, and infrastructure automation. RHCSA certified with expertise in cloud solutions." />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://devsuraj.online" />
+  <!-- ================= PRELOADER ================= -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-log mono" id="loaderLog"></div>
+    <div class="loader-count"><span id="loaderNum">00</span><i>%</i></div>
+    <div class="loader-name">Suraj <em>Suthar</em><small class="mono">DevOps Engineer · Jaipur</small></div>
+  </div>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Suraj Suthar - Cloud Engineer & DevOps Engineer" />
-    <meta name="twitter:description" content="Professional DevOps Engineer specializing in Kubernetes, AWS, Docker, Ansible, and infrastructure automation. RHCSA certified with expertise in cloud solutions." />
-  </head>
+  <!-- ================= CURSOR ================= -->
+  <div class="cursor" id="cursor" aria-hidden="true"><span class="cursor-label" id="cursorLabel"></span></div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+  <!-- ================= NAV ================= -->
+  <header class="nav" id="nav">
+    <a href="#top" class="logo" data-cursor="Home" aria-label="Back to top">
+      <span class="logo-mark mono">&gt;_</span><span class="logo-txt">suraj<b>.</b>suthar</span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#about"><span data-text="About">About</span></a>
+      <a href="#experience"><span data-text="Experience">Experience</span></a>
+      <a href="#work"><span data-text="Work">Work</span></a>
+      <a href="#journey"><span data-text="Journey">Journey</span></a>
+      <a href="#contact"><span data-text="Contact">Contact</span></a>
+    </nav>
+    <div class="nav-right">
+      <button class="theme-btn" id="themeBtn" aria-label="Toggle light and dark mode" data-cursor="Theme">
+        <span class="theme-knob"></span>
+      </button>
+      <a href="Suraj_Resume.pdf" target="_blank" rel="noopener" class="pill-btn hide-m" data-magnetic><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12"/><path d="m7 10 5 5 5-5"/><path d="M5 21h14"/></svg>Résumé</a>
+      <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">
+        <span>Menu</span><i></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="menu" id="menu" aria-hidden="true">
+    <nav>
+      <a href="#about"><small>01</small>About</a>
+      <a href="#experience"><small>02</small>Experience</a>
+      <a href="#work"><small>03</small>Work</a>
+      <a href="#journey"><small>04</small>Journey</a>
+      <a href="#contact"><small>05</small>Contact</a>
+    </nav>
+    <div class="menu-foot mono">
+      <a href="mailto:surajsuthar0654@gmail.com">surajsuthar0654@gmail.com</a>
+      <a href="Suraj_Resume.pdf" target="_blank" rel="noopener">Résumé ↗</a>
+    </div>
+  </div>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <canvas class="hero-canvas" id="cluster" aria-hidden="true"></canvas>
+
+      <div class="hero-meta mono">
+        <span>Portfolio <b>©2026</b></span>
+        <span class="hide-m">DevOps Engineer</span>
+        <span class="meta-clock">Jaipur, IN — <b id="clock">--:--:--</b> IST</span>
+      </div>
+
+      <h1 class="hero-name" aria-label="Suraj Suthar">
+        <span class="line"><span class="word split">Suraj</span></span>
+        <span class="line line-2"><span class="hero-star" aria-hidden="true">✳</span><span class="word it split">Suthar</span></span>
+      </h1>
+
+      <div class="hero-grid">
+        <div class="hero-intro">
+          <div class="now-card">
+            <span class="now-ico mono" aria-hidden="true">&gt;_</span>
+            <span class="now-txt"><small class="mono">Currently working as</small><b>DevOps Engineer</b></span>
+            <span class="now-where"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><span><b>Jaipur, IN</b><small class="mono">26.91° N · 75.79° E</small></span></span>
+          </div>
+          <p class="hero-role" aria-label="I'm a DevOps Engineer">
+            <span class="role-pre">I'm a</span>
+            <span class="role-line"><span class="role-type" id="roleType">DevOps Engineer</span><span class="role-caret" aria-hidden="true"></span></span>
+          </p>
+          <p class="hero-text">
+            I keep software <em>running.</em> I automate how apps are built, shipped and monitored —
+            with Docker, Kubernetes, Jenkins, Terraform and Grafana on Linux &amp; AWS.
+          </p>
+          <div class="hero-cta">
+            <a href="#do" class="btn btn-ink" data-magnetic data-cursor="Scroll">
+              <span>See what I do</span><span class="btn-arrow">↓</span>
+            </a>
+            <a href="#contact" class="btn btn-line" data-magnetic>
+              <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="m3.5 7.5 8.5 6 8.5-6"/></svg><span>Let's talk</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="hero-portrait" data-cursor="Hi! 👋">
+          <div class="arch">
+            <img src="images/suraj-profile.jpg" alt="Portrait of Suraj Suthar" width="900" height="878" />
+          </div>
+          <svg class="badge" viewBox="0 0 200 200" aria-hidden="true">
+            <defs><path id="circ" d="M100,100 m-78,0 a78,78 0 1,1 156,0 a78,78 0 1,1 -156,0" /></defs>
+            <text><textPath href="#circ">DEVOPS • CLOUD • LINUX • AUTOMATION • </textPath></text>
+          </svg>
+          <span class="badge-core">✦</span>
+        </figure>
+
+        <!-- Interactive terminal -->
+        <div class="terminal" id="terminal" data-cursor="Type">
+          <div class="term-bar">
+            <i></i><i></i><i></i>
+            <span>suraj@devsuraj: ~ — zsh</span>
+            <em class="mono">try “help”</em>
+          </div>
+          <div class="term-body" id="termBody" data-lenis-prevent>
+            <div id="termOut"></div>
+            <form class="term-line" id="termForm" autocomplete="off">
+              <span class="t-p">➜</span><span class="t-dir">~</span>
+              <input id="termInput" type="text" spellcheck="false" aria-label="Terminal input — type help" />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= MARQUEE ================= -->
+    <div class="marquee-wrap" aria-hidden="true">
+      <div class="marquee m1"><div class="marquee-in">
+        <span>Build</span><b>✳</b><span class="it">Automate</span><b>✳</b><span>Deploy</span><b>✳</b><span class="it">Observe</span><b>✳</b><span>Repeat</span><b>✳</b>
+        <span>Build</span><b>✳</b><span class="it">Automate</span><b>✳</b><span>Deploy</span><b>✳</b><span class="it">Observe</span><b>✳</b><span>Repeat</span><b>✳</b>
+      </div></div>
+    </div>
+
+    <!-- ================= MANIFESTO ================= -->
+    <section class="manifesto wrap" id="manifesto">
+      <p class="label mono scramble">( In one line )</p>
+      <p class="manifesto-text" id="manifestoText">
+        I'm a DevOps engineer from Jaipur. My job: get code from a developer's laptop to real users — automatically and safely — then keep it fast and online after it lands. Ideally so smoothly that nobody even notices the infrastructure underneath.
+      </p>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section class="about wrap" id="about" data-mode="eng">
+      <div class="sec-head">
+        <p class="label mono scramble">01 — About me</p>
+        <h2 class="sec-title">The person behind<br />the <em>pipelines</em></h2>
+      </div>
+
+      <div class="about-grid">
+        <aside class="about-side">
+          <div class="polaroids" id="polaroids">
+            <figure class="polaroid" data-extra style="--r:-9deg; --tx:-30px; --ty:16px;">
+              <img src="images/photo-2.jpg" alt="Suraj Suthar" draggable="false" />
+              <figcaption class="mono">IMG_002</figcaption>
+            </figure>
+            <figure class="polaroid" data-extra style="--r:8deg; --tx:40px; --ty:6px;">
+              <img src="images/photo-3.jpg" alt="Suraj Suthar" draggable="false" />
+              <figcaption class="mono">IMG_003</figcaption>
+            </figure>
+            <figure class="polaroid" data-extra style="--r:-3deg; --tx:4px; --ty:-10px;">
+              <img src="images/photo-4.jpg" alt="Suraj Suthar" draggable="false" />
+              <figcaption class="mono">IMG_004</figcaption>
+            </figure>
+            <p class="drag-hint mono">↖ drag the photos around</p>
+          </div>
+
+          <dl class="facts reveal">
+            <div><dt>Name</dt><dd>Suraj Suthar</dd></div>
+            <div><dt>Role</dt><dd>DevOps Engineer <span class="now-tag">now</span></dd></div>
+            <div><dt>Based in</dt><dd>Jaipur, Rajasthan</dd></div>
+            <div><dt>Roots</dt><dd>Pratapgarh, Rajasthan</dd></div>
+            <div><dt>Studied</dt><dd>B.Tech CSE · Arya College</dd></div>
+            <div><dt>Graduated</dt><dd>2026 · CGPA 8.8 / 10</dd></div>
+            <div><dt>Certified</dt><dd>RHCSA — Red Hat</dd></div>
+            <div><dt>Solved</dt><dd>300+ LeetCode (C++)</dd></div>
+            <div><dt>Status</dt><dd class="ok"><i></i> Open to opportunities</dd></div>
+          </dl>
+        </aside>
+
+        <div class="about-copy">
+          <div class="mode reveal" role="tablist" aria-label="How should I explain myself?">
+            <span class="mode-knob" aria-hidden="true"></span>
+            <button role="tab" aria-selected="true" data-mode="eng" data-cursor="Tech"><span class="mono">&lt;/&gt;</span> Engineer view</button>
+            <button role="tab" aria-selected="false" data-mode="plain" data-cursor="Simple"><span>☺</span> Plain English</button>
+          </div>
+
+          <div class="mode-panel" data-panel="eng">
+            <p class="big reveal">
+              I'm a DevOps engineer who works across the <em>entire</em> software lifecycle — from interfaces and APIs
+              down to the infrastructure and pipelines underneath them.
+            </p>
+            <p class="reveal">
+              On the platform side I work with <b>Docker, Kubernetes, Jenkins, Terraform, Ansible, Linux and AWS</b>.
+              Being an RHCSA-certified Linux administrator means I'm comfortable where most problems actually live — the OS.
+              On the product side I build with <b>React, TypeScript, Node.js, Express, MongoDB and SQL</b>.
+            </p>
+            <p class="reveal">
+              Day to day I keep production healthy: monitoring live infrastructure, building <b>Grafana</b> dashboards on
+              <b>ClickHouse</b> data, writing <b>Python</b> automation for operational workflows and digging into performance
+              when things get slow.
+            </p>
+            <p class="reveal">
+              300+ LeetCode problems in C++ — including the full <b>Top Interview 150</b> and <b>Top SQL 50</b> — keep my
+              data-structures and performance instincts sharp.
+            </p>
+          </div>
+
+          <div class="mode-panel" data-panel="plain" hidden>
+            <p class="big">
+              In simple words: I make sure apps and websites <em>reach people safely</em> — and stay fast and online after they do.
+            </p>
+            <p>
+              When developers write new code, I've built the <b>“conveyor belt”</b> that automatically checks it, packages it and
+              puts it live. No late-night manual uploads, no “but it worked on my laptop”.
+            </p>
+            <p>
+              Once it's live, <b>I watch over it.</b> My dashboards show how healthy every server is, and alerts tell me when
+              something looks wrong — so it gets fixed before customers notice.
+            </p>
+            <p>
+              I can also <b>build apps myself</b> (websites with React and Node.js), and I've solved <b>300+ coding puzzles</b>
+              on LeetCode to keep my problem-solving sharp.
+            </p>
+          </div>
+
+          <div class="stats">
+            <div class="stat reveal"><b><span data-count="300">0</span>+</b><span>LeetCode problems</span></div>
+            <div class="stat reveal"><b><span data-count="8.8" data-dec="1">0</span></b><span>CGPA, B.Tech</span></div>
+            <div class="stat reveal"><b><span data-count="13">0</span>+</b><span>certs &amp; badges</span></div>
+            <div class="stat reveal"><b><span data-count="20">0</span>+</b><span>GitHub repos</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE ================= -->
+    <section class="experience wrap" id="experience">
+      <div class="sec-head">
+        <p class="label mono scramble">02 — Experience</p>
+        <h2 class="sec-title">Where I am <em>now</em></h2>
+      </div>
+
+      <article class="exp exp-now reveal">
+        <div class="exp-left">
+          <span class="chip ok"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Present</span>
+          <h3>DevOps Engineer</h3>
+          <p class="exp-co mono"><span class="redact" aria-hidden="true"></span> company kept private</p>
+        </div>
+        <div class="exp-right">
+          <ul class="exp-list">
+            <li><span>01</span>Monitor production infrastructure and handle production support when something goes wrong.</li>
+            <li><span>02</span>Build Grafana dashboards on ClickHouse data so the team can see system health at a glance.</li>
+            <li><span>03</span>Automate repetitive operational workflows with Python and Bash.</li>
+            <li><span>04</span>Analyse system performance and track down what's making things slow.</li>
+          </ul>
+          <ul class="tags"><li>Grafana</li><li>ClickHouse</li><li>Python</li><li>Linux</li><li>Bash</li><li>Monitoring</li></ul>
+        </div>
+      </article>
+
+      <article class="exp reveal">
+        <div class="exp-left">
+          <span class="exp-when mono">May — Jul 2025</span>
+          <h3>Cyber Security Intern</h3>
+          <p class="exp-co mono">TechForce Academy</p>
+        </div>
+        <div class="exp-right">
+          <p class="exp-p">Advanced cyber-security programme with an internship: security fundamentals, threat analysis, security implementation and risk assessment.</p>
+          <ul class="tags"><li>Threat analysis</li><li>Risk assessment</li><li>Security</li></ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- ================= WHAT I DO (live bento) ================= -->
+    <section class="do wrap" id="do">
+      <div class="sec-head">
+        <p class="label mono scramble">03 — What I do</p>
+        <h2 class="sec-title">What a DevOps engineer<br /><em>actually</em> does</h2>
+        <p class="sec-sub">Six live simulations of my day-to-day work, each with a one-line explanation for non-engineers. The last tile isn't a simulation at all — it's <b>you</b>.</p>
+      </div>
+
+      <div class="bento">
+        <!-- 01 CI/CD -->
+        <article class="tile t-ci reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">01</span><span class="tile-k">CI / CD</span><span class="live chip"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live sim</span></header>
+          <div class="scr">
+            <div class="scr-bar mono"><i></i><i></i><i></i><span>jenkins › api › build <b id="ciBuild">#128</b></span><em id="ciTime">0.0s</em></div>
+            <div class="scr-body ci mono">
+              <div class="ci-top"><span class="ci-hash" id="ciHash">3adb824</span><span class="ci-msg" id="ciMsg">feat: add /healthz endpoint</span><span class="ci-who">suraj</span></div>
+              <div class="ci-flow">
+                <span class="ci-rail"><span id="ciProg"></span></span>
+                <ol id="ciSteps"><li><span class="ci-node"><svg class="ic" viewBox="0 0 24 24"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg><svg class="ic-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Checkout</b><small>queued</small></li><li><span class="ci-node"><svg class="ic" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" x2="12" y1="15" y2="3"/></svg><svg class="ic-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Install</b><small>queued</small></li><li><span class="ci-node"><svg class="ic" viewBox="0 0 24 24"><path d="M10 2v7.31"/><path d="M14 9.3V1.99"/><path d="M8.5 2h7"/><path d="M14 9.3a6.5 6.5 0 1 1-4 0"/><path d="M5.52 16h12.96"/></svg><svg class="ic-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Test</b><small>queued</small></li><li><span class="ci-node"><svg class="ic" viewBox="0 0 24 24"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><svg class="ic-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Build</b><small>queued</small></li><li><span class="ci-node"><svg class="ic" viewBox="0 0 24 24"><path d="M4 14.9A7 7 0 1 1 15.7 8h1.8a4.5 4.5 0 0 1 2.5 8.2"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg><svg class="ic-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Push</b><small>queued</small></li><li><span class="ci-node"><svg class="ic" viewBox="0 0 24 24"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg><svg class="ic-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><b>Deploy</b><small>queued</small></li></ol>
+              </div>
+              <ol class="console" id="ciLog"></ol>
+            </div>
+          </div>
+          <div class="tile-txt">
+            <h3>Automated pipelines</h3>
+            <p class="plain"><span class="mono">↳ in plain English</span>Every code change is checked, packaged and shipped automatically — no manual uploads.</p>
+          </div>
+          <ul class="tags"><li>Jenkins</li><li>Docker</li><li>GitHub</li><li>Kubernetes</li></ul>
+        </div></article>
+
+        <!-- 02 Kubernetes -->
+        <article class="tile t-pods reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">02</span><span class="tile-k">Kubernetes</span><span class="live chip"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live sim</span></header>
+          <div class="scr">
+            <div class="scr-bar mono"><i></i><i></i><i></i><span>kubectl get pods -n prod -w</span><em>hpa 65%</em></div>
+            <div class="scr-body pods mono">
+              <div class="pod-sum">
+                <div><small>replicas</small><b><span id="podN">2</span><i>/6</i></b></div>
+                <div><small>traffic</small><b id="podT">low</b></div>
+                <div><small>cpu avg</small><b id="podCpu">40%</b></div>
+              </div>
+              <div class="pod-head"><span>NAME</span><span>STATUS</span><span>CPU</span></div>
+              <ol class="pod-list" id="podList"></ol>
+              <p class="pod-ev" id="podEv"><b>HPA</b> steady at 2 replicas</p>
+            </div>
+          </div>
+          <div class="tile-txt">
+            <h3>Scales on demand</h3>
+            <p class="plain"><span class="mono">↳ in plain English</span>When more people use the app, it adds copies of itself to handle the load.</p>
+          </div>
+          <ul class="tags"><li>Kubernetes</li><li>HPA</li><li>Docker</li></ul>
+        </div></article>
+
+        <!-- 03 Observability -->
+        <article class="tile t-mon reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">03</span><span class="tile-k">Observability</span><span class="live chip"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live sim</span></header>
+          <div class="scr">
+            <div class="scr-bar mono"><i></i><i></i><i></i><span>grafana › api › latency · last 5m</span><em>auto ↻ 1s</em></div>
+            <div class="scr-body mon mono">
+              <div class="mon-kpis">
+                <span id="monLatBox"><small>p95 latency</small><b id="monLat">182</b> ms</span>
+                <span><small>requests / s</small><b id="monRps">1.2k</b></span>
+                <span><small>error rate</small><b id="monErr">0.02</b>%</span>
+                <span><small>uptime</small><b>99.98</b>%</span>
+              </div>
+              <svg class="mon-chart" viewBox="0 0 300 90" preserveAspectRatio="none">
+                <line class="mon-grid" x1="0" x2="300" y1="45" y2="45" />
+                <line class="mon-grid" x1="0" x2="300" y1="67.5" y2="67.5" />
+                <line class="mon-thr" x1="0" x2="300" y1="22.5" y2="22.5" />
+                <path id="monArea" class="mon-area" d="" />
+                <path id="monLine" class="mon-line" d="" />
+              </svg>
+              <div class="mon-axis"><span>-5m</span><span>-4m</span><span>-3m</span><span>-2m</span><span>-1m</span><span>now</span></div>
+            </div>
+          </div>
+          <div class="tile-txt">
+            <h3>Watching it live</h3>
+            <p class="plain"><span class="mono">↳ in plain English</span>Dashboards that show how healthy the system is, second by second. The red line is the “too slow” limit.</p>
+          </div>
+          <ul class="tags"><li>Grafana</li><li>Prometheus</li><li>ClickHouse</li></ul>
+        </div></article>
+
+        <!-- 04 Incidents -->
+        <article class="tile t-alert reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">04</span><span class="tile-k">Incidents</span><span class="live chip"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live sim</span></header>
+          <div class="scr">
+            <div class="scr-bar mono"><i></i><i></i><i></i><span>alertmanager › prod</span><em id="alertCount">0 firing</em></div>
+            <div class="scr-body alert mono" id="alertBox" data-state="ok">
+              <p class="alert-status"><i></i><span id="alertText">All systems operational</span></p>
+              <ol class="console" id="alertLog"></ol>
+            </div>
+          </div>
+          <div class="tile-txt">
+            <h3>Fixing it first</h3>
+            <p class="plain"><span class="mono">↳ in plain English</span>If something breaks, I find out first — and fix it, often before any user notices.</p>
+          </div>
+          <ul class="tags"><li>Alertmanager</li><li>Linux</li><li>Runbooks</li></ul>
+        </div></article>
+
+        <!-- 05 Terraform -->
+        <article class="tile t-iac reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">05</span><span class="tile-k">Infra as code</span><span class="live chip"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live sim</span></header>
+          <div class="scr">
+            <div class="scr-bar mono"><i></i><i></i><i></i><span>terraform › aws › prod</span><em>ap-south-1</em></div>
+            <ol class="scr-body console iac mono" id="iac"></ol>
+          </div>
+          <div class="tile-txt">
+            <h3>Servers from code</h3>
+            <p class="plain"><span class="mono">↳ in plain English</span>Infrastructure is written as code, so every server is identical and rebuildable in minutes.</p>
+          </div>
+          <ul class="tags"><li>Terraform</li><li>AWS</li><li>Ansible</li></ul>
+        </div></article>
+
+        <!-- 06 Automation -->
+        <article class="tile t-auto reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">06</span><span class="tile-k">Automation</span><span class="live chip"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live sim</span></header>
+          <div class="scr">
+            <div class="scr-bar mono"><i></i><i></i><i></i><span>journalctl -f › prod-01</span><em>systemd</em></div>
+            <ol class="scr-body console autolog mono" id="autoLog"></ol>
+          </div>
+          <div class="tile-txt">
+            <h3>Boring jobs, automated</h3>
+            <p class="plain"><span class="mono">↳ in plain English</span>Repetitive tasks become scripts that run on their own — on time, every time.</p>
+          </div>
+          <ul class="tags"><li>Python</li><li>Bash</li><li>cron</li><li>Ansible</li></ul>
+        </div></article>
+
+        <!-- 07 You (real data) -->
+        <article class="tile t-you reveal"><div class="tile-in">
+          <header class="tile-head mono"><span class="tile-n">07</span><span class="tile-k">Access log</span><span class="live chip ok"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg>Real data · only you see this</span></header>
+          <div class="you-grid">
+            <div class="you-hero">
+              <p class="you-eyebrow mono">Hey — this is you ↓</p>
+              <div class="you-ips" id="youIps">
+                <p class="you-resolving mono" id="youResolving">resolving your IP<span class="t-cursor"></span></p>
+                <button class="ip-row" id="youIp4Row" type="button" hidden data-cursor="Copy"><span class="ip-tag mono">IPv4</span><span class="ip-val mono" id="youIp4"></span></button>
+                <button class="ip-row" id="youIp6Row" type="button" hidden data-cursor="Copy"><span class="ip-tag mono">IPv6</span><span class="ip-val mono" id="youIp6"></span></button>
+              </div>
+              <p class="you-loc" id="youLoc" hidden></p>
+              <p class="you-note">Your visit, the way my server logs would see it — your IP, browser and every section you open, live. Nothing is stored; it all runs in your browser.</p>
+            </div>
+            <div class="scr you-scr">
+              <div class="scr-bar mono"><i></i><i></i><i></i><span>tail -f /var/log/nginx/access.log</span><em id="youUp">00:00</em></div>
+              <ol class="scr-body console access mono" id="accessLog"></ol>
+            </div>
+            <dl class="you-facts mono" id="youFacts"></dl>
+          </div>
+        </div></article>
+      </div>
+    </section>
+
+    <!-- ================= PIPELINE ================= -->
+    <section class="pipe-sec wrap" id="pipeline">
+      <div class="sec-head">
+        <p class="label mono scramble">04 — How I ship</p>
+        <h2 class="sec-title">From <code>git push</code> to a<br /><em>green</em> dashboard</h2>
+      </div>
+      <div class="pipe reveal">
+        <div class="pipe-track"><span class="packet"></span></div>
+        <ol>
+          <li style="--i:0"><span class="node"></span><b>Code</b><small>Git · GitHub</small></li>
+          <li style="--i:1"><span class="node"></span><b>Build</b><small>Jenkins</small></li>
+          <li style="--i:2"><span class="node"></span><b>Package</b><small>Docker</small></li>
+          <li style="--i:3"><span class="node"></span><b>Provision</b><small>Terraform · Ansible</small></li>
+          <li style="--i:4"><span class="node"></span><b>Deploy</b><small>Kubernetes · AWS</small></li>
+          <li style="--i:5"><span class="node"></span><b>Observe</b><small>Prometheus · Grafana</small></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= WORK (horizontal) ================= -->
+    <section class="work" id="work">
+      <div class="work-pin">
+        <div class="work-head wrap">
+          <p class="label mono scramble">05 — Selected work</p>
+          <h2 class="sec-title">Things I've <em>built</em></h2>
+          <p class="work-progress mono"><span id="workIdx">01</span> / 05</p>
+        </div>
+
+        <div class="work-track" id="workTrack">
+          <article class="proj" data-cursor="View">
+            <a href="https://github.com/Surajsuthar01/mern-notes-app" target="_blank" rel="noopener" class="proj-link" aria-label="mern-notes-app on GitHub"></a>
+            <div class="proj-art art-notes" aria-hidden="true">
+              <div class="note n1"><b>Sprint plan</b><i></i><i></i><i class="s"></i></div>
+              <div class="note n2"><b>API routes</b><i></i><i class="s"></i><i></i></div>
+              <div class="note n3"><b>Ideas ✳</b><i></i><i></i><i></i><i class="s"></i></div>
+              <span class="crud mono">GET · POST · PUT · DELETE</span>
+            </div>
+            <div class="proj-info">
+              <p class="proj-meta mono"><span>01</span><span>Full-stack</span></p>
+              <h3>mern-notes-app</h3>
+              <p>Full-stack notes app with a React UI, an Express REST API and MongoDB persistence. Complete CRUD with a clean, focused interface.</p>
+              <ul class="tags"><li>MongoDB</li><li>Express</li><li>React</li><li>Node.js</li></ul>
+            </div>
+          </article>
+
+          <article class="proj proj-full">
+            <div class="proj-art art-fleet" id="fleet" data-cursor="Order here">
+              <canvas id="fleetCanvas" role="img" aria-label="Animated delivery map: trucks driving between cities in Rajasthan. Click to place an order."></canvas>
+              <div class="fleet-hud mono">
+                <span class="fleet-live"><span class="bars-live" aria-hidden="true"><i></i><i></i><i></i></span>Live fleet · sim</span>
+                <span><b id="fleetTrucks">6</b> trucks</span>
+                <span><b id="fleetDone">0</b> delivered</span>
+                <span><b id="fleetOrders">0</b> queued</span>
+                <span class="fleet-tip"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4l7 17 2.5-7.5L21 11z"/></svg>Click the map to place an order</span>
+              </div>
+              <ol class="fleet-feed mono" id="fleetFeed"></ol>
+            </div>
+            <div class="proj-info">
+              <p class="proj-meta mono"><span>02</span><span>Web app</span></p>
+              <h3>surajlogistic</h3>
+              <p>Logistics management web app that brings shipment tracking, route management and delivery operations into one interface.</p>
+              <div class="proj-foot">
+                <ul class="tags"><li>JavaScript</li><li>HTML / CSS</li><li>UI / UX</li></ul>
+                <a class="proj-gh" href="https://github.com/Surajsuthar01/surajlogistic" target="_blank" rel="noopener" data-cursor="GitHub">View code ↗</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="proj" data-cursor="View">
+            <a href="https://github.com/Surajsuthar01/bash_scripting" target="_blank" rel="noopener" class="proj-link" aria-label="bash_scripting on GitHub"></a>
+            <div class="proj-art art-code mono" aria-hidden="true">
+<pre><span class="c"># provision a new team member</span>
+<span class="k">for</span> user <span class="k">in</span> <span class="s">"$@"</span>; <span class="k">do</span>
+  useradd -m -s /bin/bash <span class="s">"$user"</span>
+  chage -d 0 <span class="s">"$user"</span>
+  echo <span class="s">"[ok] $user created"</span>
+<span class="k">done</span>
+
+<span class="c"># rotate logs older than 7 days</span>
+find /var/log/app -name <span class="s">"*.log"</span> \
+  -mtime +7 -exec gzip {} \;</pre>
+            </div>
+            <div class="proj-info">
+              <p class="proj-meta mono"><span>03</span><span>DevOps / Linux</span></p>
+              <h3>bash_scripting</h3>
+              <p>A toolkit of Bash automation for Linux administration — user provisioning, file management, log rotation and everyday DevOps chores.</p>
+              <ul class="tags"><li>Bash</li><li>Linux</li><li>Automation</li></ul>
+            </div>
+          </article>
+
+          <article class="proj" data-cursor="Visit">
+            <a href="https://www.devsuraj.online" target="_blank" rel="noopener" class="proj-link" aria-label="devsuraj.online"></a>
+            <div class="proj-art art-site" aria-hidden="true">
+              <div class="mini-browser">
+                <div class="mb-bar"><i></i><i></i><i></i><span class="mono">devsuraj.online</span></div>
+                <div class="mb-body">
+                  <b>Suraj</b><b class="it">Suthar</b>
+                  <div class="mb-term mono">➜ ~ help<span class="t-cursor"></span></div>
+                </div>
+              </div>
+            </div>
+            <div class="proj-info">
+              <p class="proj-meta mono"><span>04</span><span>This website</span></p>
+              <h3>devsuraj.online</h3>
+              <p>This portfolio — hand-built HTML, CSS and JavaScript with an interactive terminal, a live canvas cluster and GSAP scroll animations.</p>
+              <ul class="tags"><li>JavaScript</li><li>GSAP</li><li>Canvas</li><li>CSS</li></ul>
+            </div>
+          </article>
+
+          <article class="proj proj-more" data-cursor="GitHub">
+            <a href="https://github.com/Surajsuthar01/" target="_blank" rel="noopener" class="proj-link" aria-label="All repositories on GitHub"></a>
+            <p class="mono">05 — And more</p>
+            <h3>20+ repos<br /><em>on GitHub</em></h3>
+            <span class="more-arrow">↗</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= JOURNEY ================= -->
+    <section class="journey wrap" id="journey">
+      <div class="sec-head">
+        <p class="label mono scramble">06 — Journey</p>
+        <h2 class="sec-title">From Pratapgarh<br />to <em>production</em></h2>
+      </div>
+
+      <div class="tl">
+        <div class="tl-line"><span id="tlFill"></span></div>
+
+        <article class="tl-item reveal">
+          <span class="tl-year">2020</span>
+          <div class="tl-card">
+            <h4>Secondary school</h4>
+            <p>Vimla Vidhya Mandir, Bambori, Pratapgarh — finished with <b>81%</b>. Maths and science were the favourites.</p>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-year">2022</span>
+          <div class="tl-card">
+            <h4>Senior secondary → B.Tech begins</h4>
+            <p>PCM + Computer Science at Govt. Sr. Sec. School, Karju (<b>80.8%</b>), then started B.Tech in Computer Science at Arya College of Engineering &amp; IT, Jaipur.</p>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-year">2024</span>
+          <div class="tl-card">
+            <h4>Red Hat Certified System Administrator</h4>
+            <p>Earned the <b>RHCSA</b> in May 2024 — system configuration, storage, users, security and services on RHEL. Linux became home turf.</p>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-year">2025</span>
+          <div class="tl-card">
+            <h4>The year of going deep</h4>
+            <p>Oracle Cloud Foundations, Docker with KodeKloud, a <b>Cyber Security internship</b> at TechForce, HackerRank SQL, NPTEL OS Fundamentals (<b>Elite</b>, IIT Kharagpur), six AWS Educate badges, and Infosys' AI Finishing School in December.</p>
+          </div>
+        </article>
+        <article class="tl-item reveal">
+          <span class="tl-year">2026</span>
+          <div class="tl-card">
+            <h4>Graduated &amp; leveled up</h4>
+            <p>Completed LeetCode's <b>Top Interview 150</b> and <b>Top SQL 50</b> in February, then graduated with a <b>CGPA of 8.8</b>.</p>
+          </div>
+        </article>
+        <article class="tl-item now reveal">
+          <span class="tl-year">Now</span>
+          <div class="tl-card">
+            <h4>DevOps Engineer · Jaipur</h4>
+            <p>Working as a <b>DevOps engineer</b> — production monitoring, Grafana &amp; ClickHouse, Python automation — while learning <b>AWS Solutions Architect</b> and <b>GitOps with ArgoCD</b>.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ================= STACK ================= -->
+    <section class="stack wrap" id="stack">
+      <div class="sec-head">
+        <p class="label mono scramble">07 — Toolkit</p>
+        <h2 class="sec-title">The <em>tools</em> I reach for</h2>
+      </div>
+
+      <div class="tool-grid">
+        <div class="tool reveal" data-k="OS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/linux/linux-original.svg" alt="" loading="lazy" /><span>Linux</span></div>
+        <div class="tool reveal" data-k="Containers"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/docker/docker-original.svg" alt="" loading="lazy" /><span>Docker</span></div>
+        <div class="tool reveal" data-k="Orchestration"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/kubernetes/kubernetes-original.svg" alt="" loading="lazy" /><span>Kubernetes</span></div>
+        <div class="tool reveal" data-k="Cloud"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/amazonwebservices/amazonwebservices-plain-wordmark.svg" alt="" loading="lazy" /><span>AWS</span></div>
+        <div class="tool reveal" data-k="IaC"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/terraform/terraform-original.svg" alt="" loading="lazy" /><span>Terraform</span></div>
+        <div class="tool reveal" data-k="Config"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/ansible/ansible-original.svg" alt="" loading="lazy" /><span>Ansible</span></div>
+        <div class="tool reveal" data-k="CI/CD"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/jenkins/jenkins-original.svg" alt="" loading="lazy" /><span>Jenkins</span></div>
+        <div class="tool reveal" data-k="Metrics"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/prometheus/prometheus-original.svg" alt="" loading="lazy" /><span>Prometheus</span></div>
+        <div class="tool reveal" data-k="Dashboards"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/grafana/grafana-original.svg" alt="" loading="lazy" /><span>Grafana</span></div>
+        <div class="tool reveal" data-k="VCS"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg" alt="" loading="lazy" /><span>Git</span></div>
+        <div class="tool reveal" data-k="Shell"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/bash/bash-original.svg" alt="" loading="lazy" /><span>Bash</span></div>
+        <div class="tool reveal" data-k="Scripting"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg" alt="" loading="lazy" /><span>Python</span></div>
+        <div class="tool reveal" data-k="DSA"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/cplusplus/cplusplus-original.svg" alt="" loading="lazy" /><span>C++</span></div>
+        <div class="tool reveal" data-k="Frontend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg" alt="" loading="lazy" /><span>React</span></div>
+        <div class="tool reveal" data-k="Types"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg" alt="" loading="lazy" /><span>TypeScript</span></div>
+        <div class="tool reveal" data-k="Backend"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nodejs/nodejs-original.svg" alt="" loading="lazy" /><span>Node.js</span></div>
+        <div class="tool reveal" data-k="API"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/express/express-original.svg" alt="" loading="lazy" /><span>Express</span></div>
+        <div class="tool reveal" data-k="NoSQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mongodb/mongodb-original.svg" alt="" loading="lazy" /><span>MongoDB</span></div>
+        <div class="tool reveal" data-k="SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/postgresql/postgresql-original.svg" alt="" loading="lazy" /><span>PostgreSQL</span></div>
+        <div class="tool reveal" data-k="SQL"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg" alt="" loading="lazy" /><span>MySQL</span></div>
+        <div class="tool reveal" data-k="Styling"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/tailwindcss/tailwindcss-original.svg" alt="" loading="lazy" /><span>Tailwind</span></div>
+        <div class="tool reveal" data-k="Framework"><img class="inv" src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/nextjs/nextjs-original.svg" alt="" loading="lazy" /><span>Next.js</span></div>
+        <div class="tool tool-learn reveal" data-k="Learning"><span class="learn-ico">↻</span><span>ArgoCD</span></div>
+        <div class="tool tool-learn reveal" data-k="Learning"><span class="learn-ico">☁</span><span>AWS SA</span></div>
+      </div>
+    </section>
+
+    <!-- ================= CERTS ================= -->
+    <section class="certs wrap" id="certs">
+      <div class="sec-head">
+        <p class="label mono scramble">08 — Credentials</p>
+        <h2 class="sec-title">Certified &amp; <em>verified</em></h2>
+      </div>
+
+      <ul class="cert-list">
+        <li class="cert reveal"><span class="cert-y mono">2024</span><h4>Red Hat Certified System Administrator <em>(RHCSA)</em></h4><span class="cert-by">Red Hat</span><span class="cert-id mono">ID 240-867-413</span></li>
+        <li class="cert reveal"><span class="cert-y mono">2025</span><h4>Operating System Fundamentals <em>— Elite</em></h4><span class="cert-by">NPTEL · IIT Kharagpur</span><span class="cert-id mono">Jul–Oct</span></li>
+        <li class="cert reveal"><span class="cert-y mono">2025</span><h4>Oracle Cloud Foundations Associate</h4><span class="cert-by">Oracle</span><span class="cert-id mono">Mar</span></li>
+        <li class="cert reveal"><span class="cert-y mono">2025</span><h4>Docker for the Absolute Beginner</h4><span class="cert-by">KodeKloud</span><span class="cert-id mono">Jun</span></li>
+        <li class="cert reveal"><span class="cert-y mono">2025</span><h4>Advanced Cyber Security <em>with Internship</em></h4><span class="cert-by">TechForce Academy</span><span class="cert-id mono">May–Jul</span></li>
+        <li class="cert reveal"><span class="cert-y mono">2025</span><h4>SQL (Basic)</h4><span class="cert-by">HackerRank</span><span class="cert-id mono">8BCCB7FAAEE7</span></li>
+        <li class="cert reveal"><span class="cert-y mono">2025</span><h4>Finishing School for Employability <em>(AI)</em></h4><span class="cert-by">Infosys Foundation</span><span class="cert-id mono">Dec</span></li>
+        <li class="cert reveal">
+          <a href="https://www.credly.com/users/suraj-suthar.34931b98/badges" target="_blank" rel="noopener" class="cert-a" data-cursor="Credly"></a>
+          <span class="cert-y mono">2025</span><h4>AWS Educate <em>× 6 badges</em></h4><span class="cert-by">Amazon Web Services</span><span class="cert-id mono">Credly ↗</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ================= DSA ================= -->
+    <section class="dsa wrap" id="dsa">
+      <div class="dsa-grid">
+        <div>
+          <p class="label mono scramble">09 — Problem solving</p>
+          <h2 class="dsa-num"><span data-count="300">0</span><em>+</em></h2>
+          <p class="dsa-sub reveal">problems solved on LeetCode in <b>C++</b> — every difficulty, every pattern.</p>
+          <div class="achv reveal">
+            <span><b>✓</b> Top Interview 150 · Feb 2026</span>
+            <span><b>✓</b> Top SQL 50 · Feb 2026</span>
+            <span><b>✓</b> 50 Days Badge · 2025</span>
+          </div>
+        </div>
+        <a class="lc reveal" href="https://leetcode.com/u/surajsuthar01/" target="_blank" rel="noopener" data-cursor="LeetCode">
+          <img src="https://leetcard.jacoblin.cool/surajsuthar01?theme=dark&font=Geist&ext=heatmap&border=0&radius=16" alt="Live LeetCode statistics for surajsuthar01" loading="lazy" />
+        </a>
+      </div>
+    </section>
+
+    <!-- ================= PRINCIPLES ================= -->
+    <section class="principles wrap">
+      <div class="sec-head">
+        <p class="label mono scramble">10 — How I work</p>
+        <h2 class="sec-title">Principles I <em>build</em> by</h2>
+      </div>
+      <div class="pr-grid">
+        <article class="pr reveal"><span class="pr-i">↺</span><h4>Automate the second time</h4><p>Do it by hand once to understand it. The second time, it becomes a script or a pipeline.</p></article>
+        <article class="pr reveal"><span class="pr-i">◉</span><h4>Unmonitored isn't done</h4><p>If there's no metric, dashboard or alert for it, it isn't really in production yet.</p></article>
+        <article class="pr reveal"><span class="pr-i">{ }</span><h4>Infrastructure is code</h4><p>Servers are versioned, reviewed and reproducible — never hand-crafted snowflakes.</p></article>
+        <article class="pr reveal"><span class="pr-i">✎</span><h4>Readable over clever</h4><p>The best code is the one a teammate can fix confidently at 3 a.m.</p></article>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="contact" id="contact">
+      <div class="marquee big" aria-hidden="true"><div class="marquee-in">
+        <span>Let's work together</span><b>✳</b><span class="it">Let's work together</span><b>✳</b>
+        <span>Let's work together</span><b>✳</b><span class="it">Let's work together</span><b>✳</b>
+      </div></div>
+
+      <div class="wrap contact-in">
+        <p class="contact-lead reveal">
+          I'm currently working as a <em>DevOps engineer</em> in Jaipur, and always happy to talk about interesting roles,
+          freelance infrastructure work or open-source collaboration. I usually reply within a day.
+        </p>
+
+        <a href="mailto:surajsuthar0654@gmail.com" class="mail reveal" id="mailLink" data-cursor="Copy">
+          <span class="mail-txt">surajsuthar0654<em>@</em>gmail.com</span>
+          <span class="mail-circle">↗</span>
+        </a>
+
+        <div class="socials reveal">
+          <a href="https://www.linkedin.com/in/suraj-suthar-7a088a28b/" target="_blank" rel="noopener" data-magnetic><span>LinkedIn</span></a>
+          <a href="https://github.com/Surajsuthar01/" target="_blank" rel="noopener" data-magnetic><span>GitHub</span></a>
+          <a href="https://leetcode.com/u/surajsuthar01/" target="_blank" rel="noopener" data-magnetic><span>LeetCode</span></a>
+          <a href="https://wa.me/6350692701?text=Hi%20Suraj%2C%20can%20we%20connect%20from%20your%20portfolio%3F" target="_blank" rel="noopener" data-magnetic><span>WhatsApp</span></a>
+          <a href="Suraj_Resume.pdf" target="_blank" rel="noopener" data-magnetic><span>Résumé</span></a>
+        </div>
+      </div>
+
+      <footer class="footer wrap mono">
+        <span>© 2026 Suraj Suthar</span>
+        <span class="hide-m">Designed &amp; built by hand in Jaipur</span>
+        <span>Local time <b id="clock2">--:--</b></span>
+        <a href="#top" class="totop" data-cursor="Top">Back to top ↑</a>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast mono" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+  <script src="main.js?v=13"></script>
+</body>
 </html>
